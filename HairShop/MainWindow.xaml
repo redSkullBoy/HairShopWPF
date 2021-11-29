@@ -6,35 +6,75 @@
         xmlns:local="clr-namespace:Интерфейс"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Интерфейс.MainWindow"
         mc:Ignorable="d"
-        Title="Продажа" Height="500" Width="700" WindowStartupLocation="CenterScreen" Background="#847545">
-    <Grid >
+        Title="Продажа" Height="500" Width="700" WindowStartupLocation="CenterScreen" >
 
-        <Rectangle Fill="PaleGoldenrod" HorizontalAlignment="Left" Height="165" Margin="473,18,0,0" Stroke="Black" VerticalAlignment="Top" Width="211" RadiusX="15" RadiusY="15"/>
-        <Label Content="Итог:" HorizontalAlignment="Left" Margin="498,43,0,0" VerticalAlignment="Top"/>
-        <Label Content="Получено:" HorizontalAlignment="Left" Margin="498,74,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.151,-0.352"/>
-        <Label Content="Сдача:" HorizontalAlignment="Left" Margin="498,105,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.43"/>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="209*"/>
+            <ColumnDefinition Width="138*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="106*"/>
+            <RowDefinition Height="115*"/>
+        </Grid.RowDefinitions>
 
-        <DataGrid Margin="0,231,-0.4,0.4" SelectionChanged="DataGrid_SelectionChanged">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Width="50" Header="№"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Width="50" Header="Код"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Width="350" Header="Номенклатура"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Width="50" Header="Кол-во"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Width="50" Header="Цена"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Width="50" Header="Сумма"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Rectangle Fill="PaleGoldenrod" HorizontalAlignment="Left" Height="26" Margin="0,205,-0.4,0" Stroke="Black" VerticalAlignment="Top" Width="694"/>
-        <Button Content="Кол-во +" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="60" FontSize="11" Height="17" Background="{x:Null}"/>
-        <Button Content="Кол-во -" HorizontalAlignment="Left" Margin="75,209,0,0" VerticalAlignment="Top" Width="60" FontSize="11" Height="17" Background="{x:Null}"/>
-        <Button Content="Удалить" HorizontalAlignment="Left" Margin="140,209,0,0" VerticalAlignment="Top" Width="60" FontSize="11" Height="17" Background="{x:Null}"/>
-        <RadioButton Content="Наличными" HorizontalAlignment="Left" Margin="33,123,0,0" VerticalAlignment="Top" FontSize="9" Grid.Column="1"/>
-        <RadioButton Content="Терминал" HorizontalAlignment="Left" Margin="122,123,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="9" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="20" Margin="590,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
-        <Rectangle Fill="PaleGoldenrod" HorizontalAlignment="Left" Height="165" Margin="10,18,0,0" RadiusY="15" RadiusX="15" Stroke="Black" VerticalAlignment="Top" Width="458"/>
+        <Viewbox VerticalAlignment="Top" Margin="0,0,-0.4,0" Height="28" Grid.ColumnSpan="2" Grid.Row="0">
+            <StackPanel  Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Stretch">
+                <Menu HorizontalContentAlignment="Stretch" Height="28" VerticalAlignment="Top"  Margin="0,0,-0.4,0"  Grid.ColumnSpan="2" Grid.Row="0" >
+                    <MenuItem Header="Меню" Height="28" Width="693">
+                        <MenuItem Header="Поставка" HorizontalAlignment="Left" Height="28" Width="139"/>
+                        <MenuItem Header="Скидки" HorizontalAlignment="Left" Height="24" Width="139"/>
+                    </MenuItem>
+                </Menu>
+            </StackPanel>
+        </Viewbox>
+        <Viewbox Grid.Row="1" Grid.Column="0" Margin="0,0,9.6,3">
+            <StackPanel HorizontalAlignment="Left" Height="208" Margin="1" VerticalAlignment="Top" Width="414" Grid.Row="1" Grid.Column="0">
+                <Viewbox>
+                    <WrapPanel Height="33" Margin="0,0,0.4,0">
+                        <ComboBox Width="120" Height="18" Margin="6"/>
+                        <ComboBox Width="120" Height="18" Margin="6"/>
+                        <ComboBox Width="120" Height="18" Margin="6"/>
+                    </WrapPanel>
+                </Viewbox>
+                <WrapPanel Height="37" Margin="0,0,0.4,0">
+                    <TextBox Height="22" TextWrapping="Wrap" Text="" Width="250" Margin="7"/>
+                    <Button Content="Button" Width="48" Height="22" Margin="5"/>
+                    <Button Content="Button" Width="46" Height="22" Margin="5"/>
+                </WrapPanel>
+                <ListBox Height="133" Margin="7,1,1.4,1"/>
 
-        <Button Content="Оплатить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="20" Background="{x:Null}" Margin="543,146,0,0"/>
+            </StackPanel>
+        </Viewbox>
+        <Viewbox Grid.Row="1" Grid.Column="1" Margin="0.4,0,-0.4,3">
+            <StackPanel HorizontalAlignment="Left" Height="184" Margin="5" VerticalAlignment="Top" Width="261" Grid.Row="1" Grid.Column="1">
+                <WrapPanel Height="50" Margin="0,0,-0.2,0">
+                    <TextBox Height="23" TextWrapping="Wrap" Text="Итог:" Width="120" Margin="13" FontSize="16" BorderThickness="0"/>
+                </WrapPanel>
+                <WrapPanel Height="50" Margin="0,0,-0.2,0">
+                    <TextBox Height="23" TextWrapping="Wrap" Text="Получено:" Width="86" Margin="13" FontSize="16" BorderThickness="0"/>
+                    <TextBox Height="23" TextWrapping="Wrap" Width="120" FontSize="16"/>
+                </WrapPanel>
+                <WrapPanel Height="50" Margin="0,0,-0.2,0">
+                    <TextBox Height="23" TextWrapping="Wrap" Text="Сдача:" Width="124" Margin="13" FontSize="16" BorderThickness="0"/>
+                </WrapPanel>
+                <Button HorizontalAlignment="Center" Content="Оплатить" Margin="102,5,95.8,1" Width="63"/>
 
+            </StackPanel>
+        </Viewbox>
+        <Viewbox Grid.Row="2" Grid.ColumnSpan="2" Margin="1">
+            <StackPanel HorizontalAlignment="Stretch" Height="321" Margin="0" Grid.Row="2" VerticalAlignment="Top" Width="960" Grid.ColumnSpan="2" >
+                <Viewbox Grid.Row="2" Grid.Column="0" Height="36" Margin="0,0,634,0">
+                    <WrapPanel Height="35" Margin="0,0,-0.4,0" Grid.Row="2" Grid.Column="0" Width="321">
+                        <Button Content="Кол-во +" Width="88" Margin="30,5,5,5" Height="23" FontSize="16"/>
+                        <Button Content="Кол-во -" Width="88" Margin="5" FontSize="16"/>
+                        <Button Content="Удалить" Width="88" Margin="5" FontSize="16"/>
+                    </WrapPanel>
+                </Viewbox>
+                <ListBox Height="272" Margin="7,1,10,5"/>
+            </StackPanel>
+        </Viewbox>
 
 
     </Grid>

@@ -22,7 +22,7 @@ namespace HairShop
     {
         public MainWindow()
         {
-            InitializeComponent();
+           // InitializeComponent();
         }
     }
 }
