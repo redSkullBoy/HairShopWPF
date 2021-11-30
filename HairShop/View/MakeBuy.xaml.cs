@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HairShop.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +14,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HairShop
+namespace HairShop.View
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MakeBuy : Window
     {
-        public MainWindow()
+        public MakeBuy()
         {
-           // InitializeComponent();
+            InitializeComponent();
+            DataContext = new BuyViewModel();
         }
     }
 }
