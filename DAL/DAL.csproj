@@ -56,22 +56,27 @@
     <Compile Include="Entity\Brand.cs" />
     <Compile Include="Entity\Check.cs" />
     <Compile Include="Entity\Discount.cs" />
-    <Compile Include="Entity\HairShopContext.cs" />
     <Compile Include="Entity\Hair_Type.cs" />
     <Compile Include="Entity\Line_of_supply.cs" />
+    <Compile Include="Entity\Model1.cs" />
     <Compile Include="Entity\Product.cs" />
     <Compile Include="Entity\Product_Type.cs" />
     <Compile Include="Entity\Supplier.cs" />
     <Compile Include="Entity\Supply.cs" />
     <Compile Include="Entity\sysdiagrams.cs" />
     <Compile Include="Entity\User.cs" />
+    <Compile Include="Interfaces\IDbRepository.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IServiceRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Repository\" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

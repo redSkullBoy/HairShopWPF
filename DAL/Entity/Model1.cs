@@ -5,10 +5,10 @@ namespace DAL.Entity
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class HairShopContext : DbContext
+    public partial class Model1 : DbContext
     {
-        public HairShopContext()
-            : base("name=HairShopContext")
+        public Model1()
+            : base("name=shopContext")
         {
         }
 

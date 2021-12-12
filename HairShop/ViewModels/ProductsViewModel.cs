@@ -15,61 +15,24 @@ namespace HairShop.ViewModels
     class ProductsViewModel : INotifyPropertyChanged
     {
         private DBOperations db;
-
-       // private readonly ObservableCollection<ProductsViewModel> _productsViewModel;
+      
         public ObservableCollection<ProductModel> prodcts { get; set; }
         public ObservableCollection<BrandModel> Brands { get; set; }
         public ObservableCollection<Product_TypeModel> prTypes { get; set; }
 
-        private Products products;
-        private string _textToFilter;
-
-        public string TextToFilter
-        {
-            get { return _textToFilter; }
-            set
-            {
-                _textToFilter = value;
-                ProductsCollection = null;
-                OnPropertyChanged(nameof(TextToFilter));
-                ProductsCollection.Refresh();
-            }
-        }
-
-        private ICollectionView _productsCollection;
-
-        public ICollectionView ProductsCollection
-        {
-           get { return _productsCollection; }
-            set { _productsCollection = value; }
-        }
+        private Products products;     
+     
 
         public ProductsViewModel(Products products)
         {
             db = new DBOperations();
-
-           // _productsViewModel = new ObservableCollection<ProductsViewModel>();        
-           
-            ProductsCollection = CollectionViewSource.GetDefaultView(prodcts);
+         
             prodcts = new ObservableCollection<ProductModel>(db.GetAllProducts());
             Brands = new ObservableCollection<BrandModel>(db.GetBrands());
             prTypes = new ObservableCollection<Product_TypeModel>(db.GetTypes());
             this.products = products;
-            ProductsCollection.Filter = FilterByName;
         }
-
-        //private IEnumerable<ProductsViewModel> GetProductsViewModels();
-
-        private bool FilterByName(object pr)
-        {
-            if (!string.IsNullOrEmpty(TextToFilter))
-            {
-                var prModel = pr as ProductModel;
-                return prModel != null && prModel.Product_Name.Contains(TextToFilter);
-            }
-            return true;
-        }
-
+                
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")
         {
