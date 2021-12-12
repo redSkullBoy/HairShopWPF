@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HairShop.Models
 {
-    class Hair_TypeModel
+    public class Hair_TypeModel
     {
         public int Hair_Type_ID { get; set; }
         public string Hair_Type_Name { get; set; }

@@ -18,7 +18,7 @@ namespace HairShop.Models
         public int Product_Type_ID { get; set; }
         public int Hair_Type_ID { get; set; }
 
-        public ProductModel() { }
+        public ProductModel(/*Products products*/) { }
         public ProductModel(Product pr)
         {
             Product_ID = pr.Product_ID;

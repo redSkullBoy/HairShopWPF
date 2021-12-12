@@ -71,6 +71,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\ProductsViewModel.cs" />
+    <Compile Include="View\Products.xaml.cs">
+      <DependentUpon>Products.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\MakeBuy.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -85,11 +89,18 @@
     <Compile Include="Models\Hair_TypeModel.cs" />
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Models\Product_TypeModel.cs" />
-    <Compile Include="ViewModels\BuyViewModel.cs" />
+    <Compile Include="ViewModels\Base\ViewModel.cs" />
+    <Compile Include="ViewModels\MakeBuyViewModel.cs" />
+    <Compile Include="ViewModels\ProductFilterViewModel.cs" />
+    <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="View\MakeBuy.xaml.cs">
       <DependentUpon>MakeBuy.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Products.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

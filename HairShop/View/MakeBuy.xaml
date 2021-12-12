@@ -39,10 +39,10 @@
         <Viewbox Grid.Row="1" Grid.Column="0" Margin="0,0,9.6,3">
             <StackPanel HorizontalAlignment="Left" Height="208" Margin="1" VerticalAlignment="Top" Width="414" Grid.Row="1" Grid.Column="0">
                 <Viewbox>
-                    <WrapPanel Height="33" Margin="0,0,0.4,0">
-                        <ComboBox Width="120" Height="21" Margin="6" ItemsSource="{Binding Brands}"  FontSize="12" FontWeight="Medium" DisplayMemberPath="Brand_Name"/>
-                        <ComboBox Width="120" Height="21" Margin="6"/>
-                        <ComboBox Width="120" Height="21" Margin="6"/>
+                    <WrapPanel Height="37" Margin="0,0,0.4,0">
+                        <ComboBox Width="120" Height="22" Margin="6" ItemsSource="{Binding Brands}" SelectedIndex="{Binding ProductFilter.Brand}" FontSize="12" FontWeight="Medium" DisplayMemberPath="Brand_Name"/>
+                        <ComboBox Width="120" Height="22" Margin="6" ItemsSource="{Binding HairTypes}" FontSize="12" FontWeight="Medium" DisplayMemberPath="Hair_Type_Name"/>
+                        <ComboBox Width="120" Height="22" Margin="6" ItemsSource="{Binding prTypes}" FontSize="12" FontWeight="Medium" DisplayMemberPath="Product_Type_Name"/>
                     </WrapPanel>
                 </Viewbox>
                 <WrapPanel Height="37" Margin="0,0,0.4,0">
@@ -69,17 +69,17 @@
                 <WrapPanel Height="50" Margin="0,0,-0.2,0">
                     <TextBox Height="23" TextWrapping="Wrap" Text="Сдача:" Width="124" Margin="13" FontSize="15" BorderThickness="0"/>
                 </WrapPanel>
-                <Button HorizontalAlignment="Center" Content="Оплатить" Margin="102,5,61.8,1" Width="97"/>
+                <Button HorizontalAlignment="Center" Content="Оплатить" Margin="65,5,61.8,1" Width="97"/>
 
             </StackPanel>
         </Viewbox>
         <Viewbox Grid.Row="2" Grid.ColumnSpan="2" Margin="1">
             <StackPanel HorizontalAlignment="Stretch" Height="321" Margin="0" Grid.Row="2" VerticalAlignment="Top" Width="960" Grid.ColumnSpan="2" >
                 <Viewbox Grid.Row="2" Grid.Column="0" Height="36" Margin="0,0,634,0">
-                    <WrapPanel Height="35" Margin="0,0,-0.4,0" Grid.Row="2" Grid.Column="0" Width="363">
+                    <WrapPanel Height="36" Margin="0,0,-0.4,0" Grid.Row="2" Grid.Column="0" Width="371">
                         <Button Content="Кол-во +" Width="106" Margin="30,5,5,5" Height="23" FontSize="16"/>
-                        <Button Content="Кол-во -" Width="102" Margin="5" FontSize="16"/>
-                        <Button Content="Удалить" Width="100" Margin="5" FontSize="16"/>
+                        <Button Content="Кол-во -" Width="102" Margin="5,5,5,5" Height="23" FontSize="16"/>
+                        <Button Content="Удалить" Width="100" Margin="5,5,5,5" Height="23" FontSize="16"/>
                     </WrapPanel>
                 </Viewbox>
                 <DataGrid Height="272" Margin="7,1,10,5"/>

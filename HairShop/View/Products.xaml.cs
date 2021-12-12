@@ -1,6 +1,7 @@
-﻿using HairShop.ViewModels;
+﻿//using HairShop.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,20 +12,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HairShop.ViewModels;
 
-namespace HairShop.View
+namespace HairShop
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Products.xaml
     /// </summary>
-    public partial class MakeBuy : Window
+    public partial class Products : Window
     {
-        public MakeBuy()
+        public Products()
         {
             InitializeComponent();
-            DataContext = new MakeBuyViewModel();
+            DataContext = new ProductsViewModel(this);
         }
+
+
+        
     }
 }
