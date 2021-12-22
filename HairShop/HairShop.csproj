@@ -71,11 +71,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ViewModels\ProductsViewModel.cs" />
-    <Compile Include="View\Products.xaml.cs">
-      <DependentUpon>Products.xaml</DependentUpon>
+    <Compile Include="Models\BrandModel.cs" />
+    <Compile Include="Models\DBOperations.cs" />
+    <Compile Include="Models\FilterProductModel.cs" />
+    <Compile Include="Models\HairTypeModel.cs" />
+    <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\ProductTypeModel.cs" />
+    <Compile Include="View\WindowManager.xaml.cs">
+      <DependentUpon>WindowManager.xaml</DependentUpon>
     </Compile>
-    <Page Include="View\MakeBuy.xaml">
+    <Page Include="View\AddToCheck.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Authorization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MakeCheck.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -83,21 +96,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\BrandModel.cs" />
-    <Compile Include="Models\CheckModel.cs" />
-    <Compile Include="Models\DBOperations.cs" />
-    <Compile Include="Models\Hair_TypeModel.cs" />
-    <Compile Include="Models\ProductModel.cs" />
-    <Compile Include="Models\Product_TypeModel.cs" />
-    <Compile Include="ViewModels\Base\ViewModel.cs" />
-    <Compile Include="ViewModels\MakeBuyViewModel.cs" />
-    <Compile Include="ViewModels\ProductFilterViewModel.cs" />
-    <Compile Include="ViewModels\RelayCommand.cs" />
-    <Compile Include="View\MakeBuy.xaml.cs">
-      <DependentUpon>MakeBuy.xaml</DependentUpon>
+    <Compile Include="ViewModels\AutorizationViewModel.cs" />
+    <Compile Include="ViewModels\MakeCheckViewModel.cs" />
+    <Compile Include="ViewModels\ReCommand.cs" />
+    <Compile Include="View\AddToCheck.xaml.cs">
+      <DependentUpon>AddToCheck.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Authorization.xaml.cs">
+      <DependentUpon>Authorization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MakeCheck.xaml.cs">
+      <DependentUpon>MakeCheck.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\Products.xaml">
+    <Page Include="View\WindowManager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,10 +141,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{3F00CBD1-EABF-4B0E-97EA-599CA5D33C31}</Project>
+      <Project>{3f00cbd1-eabf-4b0e-97ea-599ca5d33c31}</Project>
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>

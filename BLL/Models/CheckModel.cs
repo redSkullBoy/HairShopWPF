@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HairShop.Models
 {
-    class CheckModel
+    public class CheckModel
     {
         public int Check_ID { get; set; }
         public DateTime? data_sale { get; set; }

@@ -5,24 +5,24 @@ namespace DAL.Entity
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class Model1 : DbContext
+    public partial class ShopContext : DbContext
     {
-        public Model1()
+        public ShopContext()
             : base("name=shopContext")
         {
         }
 
-        public virtual DbSet<Brand> Brand { get; set; }
-        public virtual DbSet<Check> Check { get; set; }
-        public virtual DbSet<Discount> Discount { get; set; }
-        public virtual DbSet<Hair_Type> Hair_Type { get; set; }
-        public virtual DbSet<Line_of_supply> Line_of_supply { get; set; }
-        public virtual DbSet<Product> Product { get; set; }
-        public virtual DbSet<Product_Type> Product_Type { get; set; }
-        public virtual DbSet<Supplier> Supplier { get; set; }
-        public virtual DbSet<Supply> Supply { get; set; }
+        public virtual DbSet<Brand> Brands { get; set; }
+        public virtual DbSet<Check> Checks { get; set; }
+        public virtual DbSet<Discount> Discounts { get; set; }
+        public virtual DbSet<Hair_Type> Hair_Types { get; set; }
+        public virtual DbSet<Line_of_supply> Line_of_supplies { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Product_Type> Product_Types { get; set; }
+        public virtual DbSet<Supplier> Suppliers { get; set; }
+        public virtual DbSet<Supply> Supplies { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

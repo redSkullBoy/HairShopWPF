@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace HairShop.ViewModels
 {
-    public class RelayCommand : ICommand
+    public class ReCommand : ICommand
     {
         private Action<object> execute;
         private Func<object, bool> canExecute;
@@ -18,7 +18,7 @@ namespace HairShop.ViewModels
             remove { CommandManager.RequerySuggested -= value; }
         }
 
-        public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
+        public ReCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {
             this.execute = execute;
             this.canExecute = canExecute;

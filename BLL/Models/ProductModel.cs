@@ -1,9 +1,9 @@
-﻿using System;
+﻿using DAL.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL.Entity;
 
 namespace HairShop.Models
 {
@@ -18,7 +18,7 @@ namespace HairShop.Models
         public int Product_Type_ID { get; set; }
         public int Hair_Type_ID { get; set; }
 
-        public ProductModel() { }
+        public ProductModel(/*Products products*/) { }
         public ProductModel(Product pr)
         {
             Product_ID = pr.Product_ID;

@@ -1,56 +1,53 @@
-﻿using DAL.Entity;
-using HairShop.View;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL.Entity;
 
 namespace HairShop.Models
 {
     public class DBOperations
     {
-        private  HairShopContext db;
+        private ShopContext db;
         public DBOperations()
         {
-            db = new HairShopContext();
-            db.Product.Load();
-        }
-
-        public List<ProductModel> GetAllProducts()
-        {
-            return db.Product.ToList().Select(i => new ProductModel(i)).ToList();
+            db = new ShopContext();
         }
 
         public List<BrandModel> GetBrands()
         {
-            return db.Brand.ToList().Select(i => new BrandModel(i)).ToList();
+            return db.Brands.ToList().Select(i => new BrandModel(i)).ToList();
         }
 
-        public List<Hair_TypeModel> GetHairTypes()
+        public List<HairTypeModel> GetHairTypes()
         {
-            return db.Hair_Type.ToList().Select(i => new Hair_TypeModel(i)).ToList();
+            return db.Hair_Types.ToList().Select(i => new HairTypeModel(i)).ToList();
         }
 
-        public List<Product_TypeModel> GetTypes()
+        public List<ProductTypeModel> GetProductTypes()
         {
-            return db.Product_Type.ToList().Select(i => new Product_TypeModel(i)).ToList();
+            return db.Product_Types.ToList().Select(i => new ProductTypeModel(i)).ToList();
         }
 
-        //    public static List<ProductModel> GetProduct (int brandID)
-        //    {
-        //        HairShopContext db = new HairShopContext();
-        //        var request = db.Product
-        //       .Join(db.Brand, a => a.Brand_ID, m => m.Brand_ID, (a, m) => a)              
-        //           .Where(i => i.Product_Type_ID == brandID)
-        //           .Select(i => new ProductModel
-        //           {
-        //               Product_ID = i.Product_ID,
-        //               Product_Name = i.Product_Name,
-        //               volume = i.volume
-        //           }).ToList();
-        //        return request;
-        //    }
+        public List<ProductModel> GetFilteredProduct()
+        {
+            var result = db.Products.ToList().Select(i => new ProductModel(i)).ToList();
+            return result;
+        }
+
+        public List<ProductModel> GetFilteredProduct(FilterProductModel filter)
+        {
+            var result = db.Products.ToList()
+                //.Join(db.Product_Types, pr => pr.Product_Type_ID, prt => prt.Product_Type_ID, (pr, prt) => pr)
+                .Where(i => (filter.Product_Name_Temp is null || i.Product_Name.ToLower().Contains(filter.Product_Name_Temp))
+                    && (filter.Product_Type is null || i.Product_Type_ID == filter.Product_Type.Product_Type_ID)
+                    && (filter.Hair_Type is null || i.Hair_Type_ID == filter.Hair_Type.Hair_Type_ID)
+                    && (filter.Brand is null || i.Brand_ID == filter.Brand.Brand_ID))
+                .Select(i => new ProductModel(i))
+                .ToList();
+            return result;
+        }
+
     }
 }
