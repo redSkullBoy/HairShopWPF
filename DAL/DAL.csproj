@@ -55,14 +55,17 @@
   <ItemGroup>
     <Compile Include="Entity\Brand.cs" />
     <Compile Include="Entity\Check.cs" />
+    <Compile Include="Entity\CheckProduct.cs" />
     <Compile Include="Entity\Discount.cs" />
     <Compile Include="Entity\Hair_Type.cs" />
+    <Compile Include="Entity\Line_of_check.cs" />
     <Compile Include="Entity\Line_of_supply.cs" />
     <Compile Include="Entity\ShopContext.cs" />
     <Compile Include="Entity\Product.cs" />
     <Compile Include="Entity\Product_Type.cs" />
     <Compile Include="Entity\Supplier.cs" />
     <Compile Include="Entity\Supply.cs" />
+    <Compile Include="Entity\SupplyProduct.cs" />
     <Compile Include="Entity\sysdiagrams.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

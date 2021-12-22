@@ -16,6 +16,7 @@ namespace DAL.Entity
         public virtual DbSet<Check> Checks { get; set; }
         public virtual DbSet<Discount> Discounts { get; set; }
         public virtual DbSet<Hair_Type> Hair_Types { get; set; }
+        public virtual DbSet<Line_of_check> Line_of_checks { get; set; }
         public virtual DbSet<Line_of_supply> Line_of_supplies { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Product_Type> Product_Types { get; set; }
@@ -37,13 +38,15 @@ namespace DAL.Entity
 
             modelBuilder.Entity<Check>()
                 .HasMany(e => e.Product)
-                .WithMany(e => e.Check)
-                .Map(m => m.ToTable("Line_of_check").MapLeftKey("Check_ID").MapRightKey("Product_ID"));
+                .WithMany(e => e.Check);
+                //.Map(m => m.ToTable("Line_of_check").MapLeftKey("Check_ID").MapRightKey("Product_ID"));
 
             modelBuilder.Entity<Hair_Type>()
                 .HasMany(e => e.Product)
                 .WithRequired(e => e.Hair_Type)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Line_of_supply>();
 
             modelBuilder.Entity<Line_of_supply>()
                 .Property(e => e.purchasing_price)
