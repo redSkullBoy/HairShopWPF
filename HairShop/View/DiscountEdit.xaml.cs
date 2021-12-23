@@ -15,14 +15,13 @@ using System.Windows.Shapes;
 namespace HairShop.View
 {
     /// <summary>
-    /// Логика взаимодействия для WindowManager.xaml
+    /// Логика взаимодействия для DiscountEdit.xaml
     /// </summary>
-    public partial class WindowManager : Window
+    public partial class DiscountEdit : Window
     {
-        public WindowManager()
+        public DiscountEdit()
         {
             InitializeComponent();
-            DataContext = new WindowManagerViewModel(this);
         }
     }
 }

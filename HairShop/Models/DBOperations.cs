@@ -72,6 +72,12 @@ namespace HairShop.Models
             return result;
         }
 
+        public Product GetProduct(int productID)
+        {
+            return db.Products
+                .Where(i => (i.Product_ID == productID)).First();
+        }
+
         public int GetNextCheckID()
         {
             int? maxId = db.Checks.Max(u => (int?)u.Check_ID);
@@ -124,6 +130,24 @@ namespace HairShop.Models
             if (prods.Count > 0)
                 res = true;
             return res;
+        }
+
+        public void DecreaseProduct(int productID, int quantity)
+        {
+            Product product = db.Products.Find(productID);
+            if (product != null)
+            {
+                product.count_stock -= quantity;
+                db.SaveChanges();
+            }
+        }
+
+        public List<DiscountModel> GetDiscountsByDateAndProdType(DateTime dateDiscount, int prodTypeID)
+        {
+            var result = db.Discounts.ToList()
+                .Where(i => i.D_Start <= dateDiscount && i.D_End >= dateDiscount && (i.Product_Type_ID == null || i.Product_Type_ID == prodTypeID))
+                .Select(i => new DiscountModel(i)).ToList();
+            return result;
         }
     }
 }

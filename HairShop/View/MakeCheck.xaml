@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HairShop.View"
         mc:Ignorable="d"
-        Title="Оформление покупки" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Оформление покупки" Height="642" Width="821.6" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="127*"/>
@@ -16,13 +16,18 @@
                 <ImageBrush/>
             </Rectangle.Fill>
         </Rectangle>
-        <Button Content="Очистить заказ"  Command="{Binding Clear_Check}" HorizontalAlignment="Left" Margin="15,12,0,0" VerticalAlignment="Top" Width="129" Height="25" Background="#eceff1" Foreground="#546e7a" RenderTransformOrigin="0.504,0.16" FontSize="13"/>
+        <Button Content="Очистить заказ"  Command="{Binding Clear_Check}" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Width="129" Height="25" Background="#eceff1" Foreground="#546e7a" RenderTransformOrigin="0.504,0.16" FontSize="13"/>
         <Button Content="Выход" Command="{Binding Close_Win}" HorizontalAlignment="Right" Margin="0,12,9.6,0" VerticalAlignment="Top" Width="73" Background="#eceff1" Foreground="#546e7a" FontSize="13" Height="25"/>
-        <Button Content="Поиск" Command="{Binding Select_Product}" HorizontalAlignment="Left" Margin="386,81,0,0" VerticalAlignment="Top" Width="75" Height="28" Background="#eceff1" Foreground="#546e7a" FontSize="13"/>
-        <Button Content="Очистить" Command="{Binding Clear_Filter}" HorizontalAlignment="Left" Margin="466,81,0,0" VerticalAlignment="Top" Width="99" Height="28" Background="#eceff1" Foreground="#546e7a" FontSize="13"/>
+        <Button Content="Поиск" Command="{Binding Select_Product}" HorizontalAlignment="Left" Margin="386,113,0,0" VerticalAlignment="Top" Width="75" Height="28" Background="#eceff1" Foreground="#546e7a" FontSize="13"/>
+        <Button Content="Очистить" Command="{Binding Clear_Filter}" HorizontalAlignment="Left" Margin="467,113,0,0" VerticalAlignment="Top" Width="99" Height="28" Background="#eceff1" Foreground="#546e7a" FontSize="13"/>
 
+        <Label Content="Тип товара:" HorizontalAlignment="Left" Margin="15,37,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#546e7a"/>
+        <Label Content="Тип волос:" HorizontalAlignment="Left" Margin="201,37,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#546e7a"/>
+        <Label Content="Бренд:" HorizontalAlignment="Left" Margin="386,37,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#546e7a"/>
+        <Label Content="Название:" HorizontalAlignment="Left" Margin="15,88,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#546e7a" Height="25" Width="66"/>
+        
         <DataGrid x:Name="GridProducts" ItemsSource="{Binding FilteredProducts}" SelectedItem="{Binding SelectedProduct}" AutoGenerateColumns="False" 
-                   HorizontalAlignment="Stretch" Height="195" Margin="15,114,207.6,0" 
+                   HorizontalAlignment="Stretch" Height="195" Margin="15,147,207.2,0" 
                   VerticalAlignment="Top"  IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header ="Название" Binding="{Binding Path=Product_Name}"/>
@@ -38,21 +43,21 @@
 
 
         <ComboBox DisplayMemberPath="Product_Type_Name" ItemsSource="{Binding ProductTypes}"  SelectedItem="{Binding SelectedProductType}" 
-                  HorizontalAlignment="Left" Margin="15,48,0,0" VerticalAlignment="Top" Width="180" Height="28" Background="#eceff1" Foreground="#546e7a" FontSize="13"/>
+                  HorizontalAlignment="Left" Margin="15,58,0,0" VerticalAlignment="Top" Width="180" Height="28" Background="#eceff1" Foreground="#546e7a" FontSize="13"/>
         <ComboBox DisplayMemberPath="Hair_Type_Name" ItemsSource="{Binding HairTypes}" SelectedItem="{Binding SelectedHairType}" 
-                  HorizontalAlignment="Left" Margin="200,48,0,0" VerticalAlignment="Top" Width="180"  Height="28" Background="#eceff1" Foreground="#546e7a" FontSize="13"/>
+                  HorizontalAlignment="Left" Margin="201,58,0,0" VerticalAlignment="Top" Width="180"  Height="28" Background="#eceff1" Foreground="#546e7a" FontSize="13"/>
         <ComboBox DisplayMemberPath="Brand_Name" ItemsSource="{Binding Brands}" SelectedItem="{Binding SelectedBrand}"
-                  HorizontalAlignment="Left" Margin="385,48,0,0" VerticalAlignment="Top" Width="180" Height="28" Background="#eceff1" Foreground="#546e7a" FontSize="13"/>
+                  HorizontalAlignment="Left" Margin="386,58,0,0" VerticalAlignment="Top" Width="180" Height="28" Background="#eceff1" Foreground="#546e7a" FontSize="13"/>
 
-        <TextBox Text="{Binding ProductNameTemplate}" HorizontalAlignment="Left" Height="28" Margin="15,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="364"  Background="#eceff1"  FontSize="14" Foreground="#546e7a"/>
+        <TextBox Text="{Binding ProductNameTemplate}" HorizontalAlignment="Left" Height="28" Margin="15,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="364"  Background="#eceff1"  FontSize="14" Foreground="#546e7a"/>
 
 
-        <Label Content="Заказ" HorizontalAlignment="Left" Margin="15,326,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#546e7a" FontSize="13"/>
-        <Button Content="Редактировать" Command="{Binding Edit_CheckProduct}" HorizontalAlignment="Right" Margin="0,324,116,0" VerticalAlignment="Top" Width="141" Height="28" Background="#eceff1" Foreground="#546e7a"/>
-        <Button Content="Удалить" Command="{Binding Delete_CheckProduct}" HorizontalAlignment="Right" Margin="581,324,15,0" VerticalAlignment="Top" Width="96" Height="28" Background="#eceff1" Foreground="#546e7a"/>
+        <Label Content="Заказ" HorizontalAlignment="Left" Margin="15,365,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#546e7a" FontSize="13"/>
+        <Button Content="Редактировать" Command="{Binding Edit_CheckProduct}" HorizontalAlignment="Right" Margin="0,363,127.2,0" VerticalAlignment="Top" Width="141" Height="28" Background="#eceff1" Foreground="#546e7a"/>
+        <Button Content="Удалить" Command="{Binding Delete_CheckProduct}" HorizontalAlignment="Right" Margin="0,363,14.2,0" VerticalAlignment="Top" Width="96" Height="28" Background="#eceff1" Foreground="#546e7a"/>
 
         <DataGrid x:Name="GridCheckProducts" ItemsSource="{Binding CheckProducts}" SelectedItem="{Binding SelectedCheckProduct}" AutoGenerateColumns="False" 
-          HorizontalAlignment="Stretch" Margin="15,357,15,17" VerticalAlignment="Stretch" IsReadOnly="True" Grid.RowSpan="2">
+          HorizontalAlignment="Stretch" Margin="15,396,14.2,10" VerticalAlignment="Stretch" IsReadOnly="True" Grid.RowSpan="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header ="Название" Binding="{Binding Path=Product_Name}"/>
                 <DataGridTextColumn Header ="Количество"  Binding="{Binding Path=Product_Quantity}"/>
@@ -68,7 +73,7 @@
              Background="#eceff1" Foreground="#546e7a" FontSize="13" IsReadOnly="True"/>
         <Label Content="Получено:" HorizontalAlignment="Right" Margin="0,142,127,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#546e7a" FontSize="13"/>
         <TextBox Text="{Binding Summa_Received}" HorizontalAlignment="Right" Height="23" Margin="567,142,15,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" IsReadOnly="True" FontWeight="Bold" Background="#eceff1" Foreground="#546e7a" FontSize="13"/>
-        <Label Content="Сдача:" HorizontalAlignment="Right" Margin="0,171,148,0" VerticalAlignment="Top"  FontWeight="Bold" Foreground="#546e7a" FontSize="13"/>
+        <Label Content="Сдача:" HorizontalAlignment="Right" Margin="0,167,150.2,0" VerticalAlignment="Top"  FontWeight="Bold" Foreground="#546e7a" FontSize="13"/>
         <TextBox Text="{Binding Summa_OddMoney}" HorizontalAlignment="Right" Height="23" Margin="567,170,15,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" IsReadOnly="True" FontWeight="Bold" Background="#eceff1" Foreground="#546e7a" FontSize="13"/>
         <Button Content="Оплатить" Command="{Binding Check_Pdf}" HorizontalAlignment="Right" Margin="0,210,31.6,0" VerticalAlignment="Top" Width="93" FontWeight="Bold" Background="#eceff1" Foreground="#546e7a" FontSize="13"/>
 

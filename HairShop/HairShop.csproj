@@ -88,15 +88,75 @@
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Models\ProductReport.cs" />
     <Compile Include="Models\ProductTypeModel.cs" />
+    <Compile Include="Models\SupplierModel.cs" />
     <Compile Include="Models\SupplyProductModel.cs" />
+    <Compile Include="Services\Swapper.cs" />
+    <Compile Include="ViewModels\AddProductSupplyViewModel.cs" />
+    <Compile Include="ViewModels\AddToCheckViewModel.cs" />
+    <Compile Include="ViewModels\AddToSupplyViewModel.cs" />
+    <Compile Include="ViewModels\CreateProductViewModel.cs" />
+    <Compile Include="ViewModels\DiscountEditViewModel.cs" />
+    <Compile Include="ViewModels\DiscountsViewModel.cs" />
+    <Compile Include="ViewModels\MessageShowViewModel.cs" />
+    <Compile Include="ViewModels\ReportBestProductsViewModel.cs" />
+    <Compile Include="ViewModels\StorageBalanceViewModel.cs" />
+    <Compile Include="ViewModels\SupplyProductViewModel.cs" />
+    <Compile Include="ViewModels\WindowManagerViewModel.cs" />
+    <Compile Include="View\AddProductSupply.xaml.cs">
+      <DependentUpon>AddProductSupply.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddToSupply.xaml.cs">
+      <DependentUpon>AddToSupply.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CreateProduct.xaml.cs">
+      <DependentUpon>CreateProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DiscountEdit.xaml.cs">
+      <DependentUpon>DiscountEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Discounts.xaml.cs">
+      <DependentUpon>Discounts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MessageShow.xaml.cs">
+      <DependentUpon>MessageShow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReportBestProduct.xaml.cs">
+      <DependentUpon>ReportBestProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StorageBalance.xaml.cs">
+      <DependentUpon>StorageBalance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SupplyProduct.xaml.cs">
+      <DependentUpon>SupplyProduct.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\WindowManager.xaml.cs">
       <DependentUpon>WindowManager.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\AddProductSupply.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AddToCheck.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\AddToSupply.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Authorization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CreateProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DiscountEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Discounts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -121,6 +181,22 @@
       <DependentUpon>MakeCheck.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\MessageShow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ReportBestProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StorageBalance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SupplyProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\WindowManager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

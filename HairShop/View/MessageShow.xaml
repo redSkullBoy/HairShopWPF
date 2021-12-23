@@ -1,0 +1,25 @@
+﻿<Window x:Class="HairShop.View.MessageShow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HairShop.View"        
+        mc:Ignorable="d"
+        Title="MessageShow" Height="318" Width="520" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
+    <Grid>
+        <Rectangle Margin="0,0,0,0" Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="fon_login.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="248" VerticalAlignment="Bottom" Margin="20,0,23,20" RadiusY="10" RadiusX="10" Fill="#546e7a">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#eceff1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <TextBox Text="{Binding Message}" HorizontalAlignment="Left" Height="153" Margin="61,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390"
+                 IsReadOnly="True" FontSize="18" Foreground="#eceff1"/>
+        <Button Content="OK" Command="{Binding Close_Win}" HorizontalAlignment="Right" Margin="0,216,216,0" VerticalAlignment="Top" Width="67"
+            Style="{StaticResource MaterialDesignRaisedButton}" Background="#eceff1" Foreground="#546e7a" Height="28"/>
+    </Grid>
+</Window>

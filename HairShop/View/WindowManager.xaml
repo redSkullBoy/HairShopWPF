@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HairShop.View"
         mc:Ignorable="d"
-        Title="WindowManager" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Менеджер" Height="445.2" Width="680.4" WindowStartupLocation="CenterScreen"
+     
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto">
     <Grid>
+        <Rectangle Margin="0,0,0,0">
+            <Rectangle.Fill>
+                <ImageBrush/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button Content="Складские остатки" Command="{Binding Storage_Balance}" 
+                Style="{StaticResource MaterialDesignRaisedButton}" Foreground="#eceff1"
+                Background="#546e7a" HorizontalAlignment="Left" Margin="143,103,0,0" VerticalAlignment="Top" Width="400" Height="36" FontSize="18"/>
+        <Button Content="Поставка товара" Command="{Binding Supply_Product}" 
+                Style="{StaticResource MaterialDesignRaisedButton}" Foreground="#eceff1"
+                Background="#546e7a" HorizontalAlignment="Left" Margin="143,163,0,0" VerticalAlignment="Top" Width="400" Height="36" FontSize="18"/>
+        <Button Content="Акции по товарам" Command="{Binding Edit_Discounts}" 
+                Style="{StaticResource MaterialDesignRaisedButton}" Foreground="#eceff1"
+                Background="#546e7a" HorizontalAlignment="Left" Margin="143,223,0,0" VerticalAlignment="Top" Width="400" Height="36" FontSize="18"/>
+        <Button Content="Отчет о востребованных товарах" Command="{Binding Report_BestProducts}" 
+                Style="{StaticResource MaterialDesignRaisedButton}" Foreground="#eceff1"
+                Background="#546e7a" HorizontalAlignment="Left" Margin="143,283,0,0" VerticalAlignment="Top" Width="400" Height="36" FontSize="18"/>
+        <Button Content="Выход" Command="{Binding Close_Win}" Foreground="#eceff1" Background="#546e7a" HorizontalAlignment="Right" Margin="0,15,15,0" 
+                VerticalAlignment="Top" Width="103" FontSize="18" Height="36"/>
 
     </Grid>
 </Window>

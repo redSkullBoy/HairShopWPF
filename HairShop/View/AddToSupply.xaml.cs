@@ -15,14 +15,13 @@ using System.Windows.Shapes;
 namespace HairShop.View
 {
     /// <summary>
-    /// Логика взаимодействия для WindowManager.xaml
+    /// Логика взаимодействия для AddToSupply.xaml
     /// </summary>
-    public partial class WindowManager : Window
+    public partial class AddToSupply : Window
     {
-        public WindowManager()
+        public AddToSupply()
         {
             InitializeComponent();
-            DataContext = new WindowManagerViewModel(this);
         }
     }
 }

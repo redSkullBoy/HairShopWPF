@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HairShop.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +16,14 @@ using System.Windows.Shapes;
 namespace HairShop.View
 {
     /// <summary>
-    /// Логика взаимодействия для WindowManager.xaml
+    /// Логика взаимодействия для MessageShow.xaml
     /// </summary>
-    public partial class WindowManager : Window
+    public partial class MessageShow : Window
     {
-        public WindowManager()
+        public MessageShow()
         {
             InitializeComponent();
-            DataContext = new WindowManagerViewModel(this);
+            DataContext = new MessageShowViewModel(this);
         }
     }
 }

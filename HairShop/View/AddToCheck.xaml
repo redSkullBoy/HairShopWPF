@@ -8,10 +8,10 @@
         Title="Добавление товара в заказ" Height="217.659" Width="400" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,0,-1">
         <Label Content="Товар:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox Text="{Binding SelectedProductName}" HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="372"/>
+        <TextBox x:Name="textBoxProductName" Text="{Binding ProductName}" HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="372"/>
         <Label Content="Количество:" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,100,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="182"/>
-        <Button Content="Добавить в заказ" HorizontalAlignment="Left" Margin="10,151,0,0" VerticalAlignment="Top" Width="182"/>
-
+        <TextBox Text="{Binding ProductQuantity}" HorizontalAlignment="Left" Height="23" Margin="10,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182"/>
+        <Button Content="Добавить в заказ" Command="{Binding Add_To_Check}" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Width="182"/>
+        <Button Content="Закрыть" Command="{Binding Close_Win}" HorizontalAlignment="Left" Margin="287,151,0,0" VerticalAlignment="Top" Width="95" Height="28"/>
     </Grid>
 </Window>

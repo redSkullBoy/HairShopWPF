@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using HairShop.Services;
 using HairShop.ViewModels;
 
 namespace HairShop.View
@@ -28,8 +29,38 @@ namespace HairShop.View
 
         private void Row_DoubleClick(object sender, MouseButtonEventArgs e)
         {
+            Swapper.CheckID = ((MakeCheckViewModel)DataContext).CheckID;
+            Swapper.ProductID = ((MakeCheckViewModel)DataContext).SelectedProduct.Product_ID;
+            Swapper.ProductName = ((MakeCheckViewModel)DataContext).SelectedProduct.Product_Name;
+            Swapper.ProductUnitPrice = ((MakeCheckViewModel)DataContext).SelectedProduct.unit_price;
+            Swapper.ProductQuantity = "";
+            Swapper.ModeAddOrEdit = "add";
             AddToCheck frm = new AddToCheck();
             frm.ShowDialog();
+            ((MakeCheckViewModel)DataContext).RefreshCheckProducts();
         }
+        private void SummaReceived_TextChanged(object sender, EventArgs e)
+        {
+            ((MakeCheckViewModel)DataContext).RefreshCheckProducts();
+        }
+
+        private void SummaReceived_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key != System.Windows.Input.Key.Return) return;
+            ((MakeCheckViewModel)DataContext).RefreshCheckProducts();
+        }
+
+        private void TextBox_KeyEnterUpdate(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                TextBox tBox = (TextBox)sender;
+                DependencyProperty prop = TextBox.TextProperty;
+
+                BindingExpression binding = BindingOperations.GetBindingExpression(tBox, prop);
+                if (binding != null) { binding.UpdateSource(); }
+            }
+        }
+
     }
 }

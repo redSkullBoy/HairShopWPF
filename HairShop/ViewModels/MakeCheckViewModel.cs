@@ -12,22 +12,20 @@ using HairShop.View;
 using HairShop.Models;
 using System.Collections.ObjectModel;
 using iTextSharp.text.pdf;
-using System.Windows.Documents;
 using System.IO;
 using iTextSharp.text;
+using HairShop.Services;
 
 namespace HairShop.ViewModels
 {
     class MakeCheckViewModel : INotifyPropertyChanged
     {
-       // private ShopContext HairShop;
         private DBOperations db;
 
         private MakeCheck makecheck;
         public MakeCheckViewModel(MakeCheck makecheck)
         {
             this.makecheck = makecheck;
-           // HairShop = new ShopContext();
 
             db = new DBOperations();
 
@@ -48,17 +46,6 @@ namespace HairShop.ViewModels
             set { checkID = value; }
         }
 
-
-        //private AddToCheck addtocheck;
-        //public MakeCheckViewModel(AddToCheck addtocheck)
-        //{
-        //    MessageBox.Show("addtocheck " + this.selectedProductName);
-        //    OnPropertyChanged("SelectedProductName");
-        //    this.addtocheck = addtocheck;
-        //   // HairShop = new ShopContext();
-
-        //    db = new DBOperations();
-        //}
 
         private ReCommand close;
         public ReCommand Close_Win
@@ -146,7 +133,6 @@ namespace HairShop.ViewModels
             set
             {
                 selectedProduct = value;
-                selectedProductName = value.Product_Name;
             }
         }
 
@@ -156,6 +142,10 @@ namespace HairShop.ViewModels
             OnPropertyChanged("CheckProducts");
             Summa_Itogo = ReCountItog();
             OnPropertyChanged("Summa_Itogo");
+            Summa_OddMoney = Summa_Received - Summa_Itogo;
+            if (Summa_OddMoney < 0.0M)
+                Summa_OddMoney = 0.0M;
+            OnPropertyChanged("Summa_OddMoney");
         }
 
         private BrandModel selectedBrand;
@@ -203,6 +193,8 @@ namespace HairShop.ViewModels
             {
                 summa_itogo = value;
                 Summa_OddMoney = Summa_Received - value;
+                if (Summa_OddMoney < 0.0M)
+                    Summa_OddMoney = 0.0M;
                 OnPropertyChanged("Summa_OddMoney");
             }
         }
@@ -215,6 +207,8 @@ namespace HairShop.ViewModels
             {
                 summa_received = value;
                 Summa_OddMoney = value - Summa_Itogo;
+                if (Summa_OddMoney < 0.0M)
+                    Summa_OddMoney = 0.0M;
                 OnPropertyChanged("Summa_OddMoney");
             }
         }
@@ -243,6 +237,19 @@ namespace HairShop.ViewModels
                       OnPropertyChanged("CheckProducts");
                       Summa_Itogo = ReCountItog();
                       OnPropertyChanged("Summa_Itogo");
+                      Summa_Received = 0;
+                      OnPropertyChanged("Summa_Received");
+
+                      productNameTemplate = null;
+                      OnPropertyChanged("productNameTemplate");
+                      selectedProductType = null;
+                      OnPropertyChanged("selectedProductType");
+                      selectedHairType = null;
+                      OnPropertyChanged("selectedHairType");
+                      selectedBrand = null;
+                      OnPropertyChanged("selectedBrand");
+                      FilteredProducts = new ObservableCollection<ProductModel>(db.GetFilteredProduct());
+                      OnPropertyChanged("FilteredProducts");
                   }));
             }
         }
@@ -326,6 +333,21 @@ namespace HairShop.ViewModels
                 return check_pdf ??
                   (check_pdf = new ReCommand(obj =>
                   {
+                      //проверка количество товара на складе
+                      for (int ii = 0; ii < CheckProducts.Count; ii++)
+                      {
+                          Product prod = db.GetProduct(CheckProducts[ii].Product_ID);
+                          if (CheckProducts[ii].Product_Quantity > prod.count_stock)
+                          {
+                              string strMsg = "Количество товара '" + prod.Product_Name + "' (" + CheckProducts[ii].Product_Quantity.ToString()
+                                  + " ед.) превышает количество товара на складе. Доступно: " + prod.count_stock.ToString() + " ед.";
+                              Swapper.MessageShowText = strMsg;
+                              MessageShow frm = new MessageShow();
+                              frm.ShowDialog();
+                              return;
+                          }
+                      }
+                      //печать чека
                       string ttf = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "ARIAL.TTF");
                       var baseFont = BaseFont.CreateFont(ttf, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
                       var font = new Font(baseFont, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL);
@@ -393,6 +415,8 @@ namespace HairShop.ViewModels
                               cell.HorizontalAlignment = 2;
                               cell.Padding = 5;
                               table.AddCell(cell);
+
+                              db.DecreaseProduct(CheckProducts[ii].Product_ID, CheckProducts[ii].Product_Quantity);
                           }
                           document.Add(table);
 
@@ -406,20 +430,31 @@ namespace HairShop.ViewModels
                           document.Close();
                           writer.Close();
 
-                          MessageBox.Show("Покупка произведена. Чек '" + pdfName + "' сохранен.");
+                          Swapper.MessageShowText = "Покупка произведена. Чек '" + pdfName + "' сохранен.";
+                          MessageShow frm = new MessageShow();
+                          frm.ShowDialog();
                           System.Diagnostics.Process.Start(pdfName);
-
-                          for (int ii = 0; ii < CheckProducts.Count; ii++)
-                          {
-                              Line_of_check loch = db.GetLineOfCheck(checkID, CheckProducts[ii].Product_ID);
-                              db.RemoveLineOfChecks(loch);
-                          }
+                          
+                          checkID = db.GetNextCheckID();
+                                                   
                           CheckProducts = new ObservableCollection<CheckProductModel>(db.GetCheckProducts(checkID));
                           OnPropertyChanged("CheckProducts");
                           Summa_Itogo = ReCountItog();
                           OnPropertyChanged("Summa_Itogo");
+                          Summa_Received = 0;
+                          OnPropertyChanged("Summa_Received");
 
-                          checkID = db.GetNextCheckID();
+                          productNameTemplate = null;
+                          OnPropertyChanged("productNameTemplate");
+                          selectedProductType = null;
+                          OnPropertyChanged("selectedProductType");
+                          selectedHairType = null;
+                          OnPropertyChanged("selectedHairType");
+                          selectedBrand = null;
+                          OnPropertyChanged("selectedBrand");
+                          FilteredProducts = new ObservableCollection<ProductModel>(db.GetFilteredProduct());
+                          OnPropertyChanged("FilteredProducts");
+
                       }
                   }));
             }

@@ -23,7 +23,7 @@ namespace HairShop.View
         public AddToCheck()
         {
             InitializeComponent();
-            DataContext = new MakeCheckViewModel(this);
+            DataContext = new AddToCheckViewModel(this);
         }
 
     }
