@@ -29,7 +29,7 @@
         <Button Content="Отчет о востребованных товарах" Command="{Binding Report_BestProducts}" 
                 Style="{StaticResource MaterialDesignRaisedButton}" Foreground="#eceff1"
                 Background="#546e7a" HorizontalAlignment="Left" Margin="143,283,0,0" VerticalAlignment="Top" Width="400" Height="36" FontSize="18"/>
-        <Button Content="Выход" Command="{Binding Close_Win}" Foreground="#eceff1" Background="#546e7a" HorizontalAlignment="Right" Margin="0,15,15,0" 
+        <Button Content="Выход" Command="{Binding Close_Win}" Foreground="#eceff1" Background="#546e7a" HorizontalAlignment="Right" Margin="0,25,28.6,0" 
                 VerticalAlignment="Top" Width="103" FontSize="18" Height="36"/>
 
     </Grid>

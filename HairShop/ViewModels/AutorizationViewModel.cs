@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using DAL.Entity;
+using HairShop.Services;
 using HairShop.View;
 
 namespace HairShop.ViewModels
@@ -61,18 +62,16 @@ namespace HairShop.ViewModels
                       User user = HairShop.Users.Where(i => i.Login == login).SingleOrDefault();
                       if (user != null && user.Password.ToString() == _password)
                       {
+                          Swapper.CurrentUserID = user.User_ID;
                           int userRole = user.Role;
-                          if (userRole == 1) //--- менеджер
+                          if (userRole == 1) //менеджер
                           {
                               WindowManager winManager = new WindowManager();
                               authorization.Close();
                               winManager.Show();
                           }
-                          else //--- продавец
-                          {
-                              //WindowSalesman winSalesman = new WindowSalesman();
-                              //authorization.Close();
-                              //winSalesman.Show();
+                          else //продавец
+                          {                              
                               MakeCheck makeCheck = new MakeCheck();
                               authorization.Close();
                               makeCheck.Show();

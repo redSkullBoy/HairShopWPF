@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HairShop.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +18,12 @@ namespace HairShop.View
     /// <summary>
     /// Логика взаимодействия для ReportBestProduct.xaml
     /// </summary>
-    public partial class ReportBestProduct : Window
+    public partial class ReportBestProducts : Window
     {
-        public ReportBestProduct()
+        public ReportBestProducts()
         {
             InitializeComponent();
+            DataContext = new ReportBestProductsViewModel(this);
         }
     }
 }

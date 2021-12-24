@@ -120,8 +120,8 @@
     <Compile Include="View\MessageShow.xaml.cs">
       <DependentUpon>MessageShow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ReportBestProduct.xaml.cs">
-      <DependentUpon>ReportBestProduct.xaml</DependentUpon>
+    <Compile Include="View\ReportBestProducts.xaml.cs">
+      <DependentUpon>ReportBestProducts.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\StorageBalance.xaml.cs">
       <DependentUpon>StorageBalance.xaml</DependentUpon>
@@ -185,7 +185,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ReportBestProduct.xaml">
+    <Page Include="View\ReportBestProducts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

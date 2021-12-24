@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HairShop.View"
         mc:Ignorable="d"
-        Title="Discounts" Height="450" Width="800">
+        Title="Акции" Height="480" Width="720" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Rectangle Margin="0,0,0,0" Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <ImageBrush/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button Content="Закрыть" Command="{Binding Close_Win}" HorizontalAlignment="Right" Margin="603,15,15,0" VerticalAlignment="Top" Width="92"
+               Background="#eceff1" Foreground="#546e7a" Height="28"/>
+        <DataGrid x:Name="GridDiscounts" ItemsSource="{Binding TableDiscounts}" SelectedItem="{Binding SelectedDiscount}" AutoGenerateColumns="False" 
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="15,62,15,15" IsReadOnly="True" FontSize="14" Foreground="#546e7a">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header ="Название" Binding="{Binding Discount_Name}"/>
+                <DataGridTextColumn Header ="Процент"  Binding="{Binding Discount_amount}"/>
+                <DataGridTextColumn Header ="Дата начала" Binding="{Binding D_Start}"/>
+                <DataGridTextColumn Header ="Дата окончания" Binding="{Binding D_End}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Создать акцию" Command="{Binding Create_Discount}" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Width="133"
+            Style="{StaticResource MaterialDesignRaisedButton}" 
+                Background="#eceff1" Foreground="#546e7a" Height="28"/>
+        <Button Content="Редактировать" Command="{Binding Edit_Discount}" HorizontalAlignment="Left" Margin="153,15,0,0" VerticalAlignment="Top" Width="139"
+                Style="{StaticResource MaterialDesignRaisedButton}" 
+                Background="#eceff1" Foreground="#546e7a" Height="28"/>
+        <Button Content="Удалить" Command="{Binding Delete_Discount}" HorizontalAlignment="Left" Margin="297,15,0,0" VerticalAlignment="Top" Width="99"
+                Background="#eceff1" Foreground="#546e7a" Height="28" RenderTransformOrigin="1.517,0.788"/>
+
     </Grid>
 </Window>

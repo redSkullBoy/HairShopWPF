@@ -35,6 +35,69 @@ namespace HairShop.ViewModels
             }
         }
 
+        private ReCommand storage_balance;
+        public ReCommand Storage_Balance
+        {
+            get
+            {
+                return storage_balance ??
+                  (storage_balance = new ReCommand(obj =>
+                  {
+                      windowmanager.Hide();
+                      StorageBalance frm = new StorageBalance();
+                      frm.ShowDialog();
+                      windowmanager.Show();
+                  }));
+            }
+        }
+
+        private ReCommand supply_product;
+        public ReCommand Supply_Product
+        {
+            get
+            {
+                return supply_product ??
+                  (supply_product = new ReCommand(obj =>
+                  {
+                      windowmanager.Hide();
+                      HairShop.View.SupplyProduct frm = new HairShop.View.SupplyProduct();
+                      frm.ShowDialog();
+                      windowmanager.Show();
+                  }));
+            }
+        }
+
+        private ReCommand edit_discounts;
+        public ReCommand Edit_Discounts
+        {
+            get
+            {
+                return edit_discounts ??
+                  (edit_discounts = new ReCommand(obj =>
+                  {
+                      windowmanager.Hide();
+                      Discounts frm = new Discounts();
+                      frm.ShowDialog();
+                      windowmanager.Show();
+                  }));
+            }
+        }
+
+
+        private ReCommand report_best;
+        public ReCommand Report_BestProducts
+        {
+            get
+            {
+                return report_best ??
+                  (report_best = new ReCommand(obj =>
+                  {
+                      ReportBestProducts frm = new ReportBestProducts();
+                      frm.ShowDialog();
+                  }));
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")
         {

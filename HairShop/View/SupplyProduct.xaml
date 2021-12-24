@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HairShop.View"
         mc:Ignorable="d"
-        Title="SupplyProduct" Height="450" Width="800">
+        Title="Поставка товара" Height="480" Width="720" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Rectangle Margin="0,0,0,0">
+            <Rectangle.Fill>
+                <ImageBrush/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button Content="Закрыть" Command="{Binding Close_Win}" HorizontalAlignment="Right" Margin="597,15,15,0" VerticalAlignment="Top" Width="100" Background="#eceff1" Foreground="#546e7a" Height="28"/>
+        <Label Content="Номер накладной:" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Foreground="#546e7a" FontWeight="Bold"/>
+        <TextBox Text="{Binding NumberInvoice}" HorizontalAlignment="Left" Margin="138,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"
+             Background="#eceff1" Height="28"/>
+        <Label Content="Дата:" HorizontalAlignment="Left" Margin="18,48,0,0" VerticalAlignment="Top" Foreground="#546e7a" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Margin="138,48,0,0" VerticalAlignment="Top" Width="221" Fill="#eceff1" Height="28"/>
+        <DatePicker Text="{Binding DateInvoice}" HorizontalAlignment="Left" Margin="138,48,0,0" VerticalAlignment="Top" Width="221" Background="#eceff1" Height="28" BorderBrush="#546e7a"/>
+        <Label Content="Поставщик:" HorizontalAlignment="Left" Margin="18,81,0,0" VerticalAlignment="Top" Foreground="#546e7a" FontWeight="Bold"/>
+        <Button Content="Добавить" Command="{Binding Add_Product}" HorizontalAlignment="Left" Margin="372,81,0,0" VerticalAlignment="Top" Width="103" Background="#eceff1" Foreground="#546e7a" Height="28"/>
+        <Button Content="Удалить" Command="{Binding Delete_Product}" HorizontalAlignment="Left" Margin="480,81,0,0" VerticalAlignment="Top" Width="87" 
+            Background="#eceff1" Foreground="#546e7a" Height="28"/>
+        <DataGrid x:Name="GridProducts" ItemsSource="{Binding SupplyProducts}" SelectedItem="{Binding SelectedSupplyProduct}" AutoGenerateColumns="False" 
+            HorizontalAlignment="Stretch" Margin="15,126,15,15" 
+            VerticalAlignment="Stretch" IsReadOnly="True" FontSize="14" Foreground="#546e7a">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header ="Название" Binding="{Binding Product_Name}"/>
+                <DataGridTextColumn Header ="Количество" Binding="{Binding Product_Quantity}"/>
+                <DataGridTextColumn Header ="Стоимость" Binding="{Binding Product_Price}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Провести" Command="{Binding Applay_Product}" HorizontalAlignment="Right" Margin="0,81,15,0" VerticalAlignment="top" Width="120"
+                Style="{StaticResource MaterialDesignRaisedButton}" 
+                Background="#eceff1" Foreground="#546e7a" Height="28"/>
+        <ComboBox DisplayMemberPath="Supplier_Name" ItemsSource="{Binding Suppliers}"  SelectedItem="{Binding SelectedSupplier}" 
+            HorizontalAlignment="Left" Margin="138,81,0,0" VerticalAlignment="Top" Width="221" Background="#eceff1" Height="28"
+            FontSize="14" Foreground="#546e7a" />
     </Grid>
 </Window>

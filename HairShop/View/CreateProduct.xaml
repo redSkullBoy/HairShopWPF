@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HairShop.View"
         mc:Ignorable="d"
-        Title="CreateProduct" Height="450" Width="800">
+        Title="Добавление товара" Height="322" Width="410"  WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        
+        <Rectangle Margin="0,0,0,0" Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <ImageBrush/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Название товара:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="#546e7a" FontWeight="Bold"/>
+        <TextBox Text="{Binding Product_Name}" HorizontalAlignment="Left" Height="23" Margin="121,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+            Background="#eceff1" Width="266"/>
+        <Label Content="Тип товара:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Foreground="#546e7a" FontWeight="Bold"/>
+        <ComboBox DisplayMemberPath="Product_Type_Name" ItemsSource="{Binding ProductTypes}"  SelectedItem="{Binding SelectedProductType}" 
+            HorizontalAlignment="Left" Margin="121,44,0,0" VerticalAlignment="Top" Width="266" Background="#eceff1" Foreground="#546e7a"/>
+        <Label Content="Тип волос:" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Foreground="#546e7a" FontWeight="Bold"/>
+        <ComboBox DisplayMemberPath="Hair_Type_Name" ItemsSource="{Binding HairTypes}" SelectedItem="{Binding SelectedHairType}" 
+            HorizontalAlignment="Left" Margin="121,75,0,0" VerticalAlignment="Top" Width="266" Background="#eceff1" Foreground="#546e7a"/>
+        <Label Content="Бренд:" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Foreground="#546e7a" FontWeight="Bold"/>
+        <ComboBox DisplayMemberPath="Brand_Name" ItemsSource="{Binding Brands}" SelectedItem="{Binding SelectedBrand}" HorizontalAlignment="Left" 
+            Margin="121,106,0,0" VerticalAlignment="Top" Width="266" Background="#eceff1" Foreground="#546e7a"/>
+        <Label Content="Объем:" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Foreground="#546e7a" FontWeight="Bold"/>
+        <TextBox Text="{Binding Product_Volume}" HorizontalAlignment="Left" Height="23" Margin="121,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+           Width="266" Background="#eceff1"/>
+        <Label Content="Количество:" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Foreground="#546e7a" FontWeight="Bold"/>
+        <TextBox Text="{Binding Product_Quantity}" HorizontalAlignment="Left" Height="23" Margin="121,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+            Width="266" Background="#eceff1"/>
+        <Label Content="Стоимость:" HorizontalAlignment="Left" Margin="10,196,0,0" VerticalAlignment="Top" Foreground="#546e7a" FontWeight="Bold"/>
+        <TextBox Text="{Binding Product_Price}" HorizontalAlignment="Left" Height="23" Margin="121,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+            Width="266" Background="#eceff1"/>
+        <Button Content="Создать" Command="{Binding Create_Product}" HorizontalAlignment="Left" Margin="68,244,0,0" VerticalAlignment="Top" Width="118"             
+                Background="#eceff1" Foreground="#546e7a" Height="28"/>
+        <Button Content="Отменить" Command="{Binding Close_Win}" HorizontalAlignment="Left" Margin="220,244,0,0" VerticalAlignment="Top" Width="118" Background="#eceff1" Foreground="#546e7a" Height="28"/>
+
     </Grid>
 </Window>

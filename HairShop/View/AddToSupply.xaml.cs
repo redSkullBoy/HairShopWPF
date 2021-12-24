@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HairShop.Services;
+using HairShop.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,16 @@ namespace HairShop.View
         public AddToSupply()
         {
             InitializeComponent();
+            DataContext = new AddToSupplyViewModel(this);
         }
+        //private void Row_DoubleClick(object sender, MouseButtonEventArgs e)
+        //{
+        //    Swapper.SupplyID = ((AddToSupplyViewModel)DataContext).Supply_ID;
+        //    Swapper.ProductID = ((AddToSupplyViewModel)DataContext).SelectedProduct.Product_ID;
+        //    Swapper.ProductName = ((AddToSupplyViewModel)DataContext).SelectedProduct.Product_Name;
+        //    AddProductSupply frm = new AddProductSupply();
+        //    frm.ShowDialog();
+        //    this.Close();
+        //}
     }
 }
