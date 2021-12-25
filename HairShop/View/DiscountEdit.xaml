@@ -9,30 +9,30 @@
     <Grid>
         <Rectangle Margin="0,0,0,0" Grid.ColumnSpan="2">
             <Rectangle.Fill>
-                <ImageBrush/>
+                <ImageBrush ImageSource="back1.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Label Content="Название:" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#546e7a"/>
-        <TextBox Text="{Binding Discount_Name}" HorizontalAlignment="Left" Height="23" Margin="116,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
-             Width="333" Background="#eceff1"/>
+        <Label Content="Название:" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#546e7a"/>
+        <TextBox Text="{Binding Discount_Name}" HorizontalAlignment="Left" Height="25" Margin="116,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+             Width="333" Background="#eceff1" FontSize="12" Foreground="#546e7a"/>
         <Label Content="Процент:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"  FontWeight="Bold" Foreground="#546e7a"/>
-        <TextBox Text="{Binding Discount_Percent}" HorizontalAlignment="Left" Height="23" Margin="116,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
-             Width="333" Background="#eceff1"/>
-        <Label Content="Дата начала:" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"  FontWeight="Bold" Foreground="#546e7a"/>
-        <Rectangle HorizontalAlignment="Left" Margin="116,72,0,0" VerticalAlignment="Top" Width="333" Height="28" Fill="#eceff1"/>
-        <DatePicker SelectedDate="{Binding Discount_DateBeg}" HorizontalAlignment="Left" Margin="116,72,0,0" VerticalAlignment="Top" Width="333" 
-             Background="#eceff1" BorderBrush="#546e7a" Height="28"/>
-        <Label Content="Дата окончания:" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"  FontWeight="Bold" Foreground="#546e7a"/>
-        <Rectangle HorizontalAlignment="Left" Margin="116,104,0,0" VerticalAlignment="Top" Width="333" Height="28" Fill="#eceff1"/>
-        <DatePicker SelectedDate="{Binding Discount_DateEnd}" HorizontalAlignment="Left" Margin="116,104,0,0" VerticalAlignment="Top" Width="333" 
-             Background="#eceff1" BorderBrush="#546e7a" Height="28"/>
-        <Label Content="Тип товара:" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top"  FontWeight="Bold" Foreground="#546e7a"/>
+        <TextBox Text="{Binding Discount_Percent}" HorizontalAlignment="Left" Height="25" Margin="116,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+             Width="333" Background="#eceff1" FontSize="12" Foreground="#546e7a"/>
+        <Label Content="Дата начала:" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top"  FontWeight="Bold" Foreground="#546e7a"/>
+        <Rectangle HorizontalAlignment="Left" Margin="116,76,0,0" VerticalAlignment="Top" Width="333" Height="28" Fill="#eceff1"/>
+        <DatePicker SelectedDate="{Binding Discount_DateBeg}" HorizontalAlignment="Left" Margin="116,76,0,0" VerticalAlignment="Top" Width="333" 
+             Background="#eceff1" BorderBrush="#546e7a" Height="28" FontSize="12"/>
+        <Label Content="Дата окончания:" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top"  FontWeight="Bold" Foreground="#546e7a"/>
+        <Rectangle HorizontalAlignment="Left" Margin="116,115,0,0" VerticalAlignment="Top" Width="333" Height="28" Fill="#eceff1"/>
+        <DatePicker SelectedDate="{Binding Discount_DateEnd}" HorizontalAlignment="Left" Margin="116,116,0,0" VerticalAlignment="Top" Width="333" 
+             Background="#eceff1" BorderBrush="#546e7a" Height="28" FontSize="12"/>
+        <Label Content="Тип товара:" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top"  FontWeight="Bold" Foreground="#546e7a"/>
         <ComboBox DisplayMemberPath="Product_Type_Name" ItemsSource="{Binding ProductTypes}"  SelectedItem="{Binding SelectedProductType}" HorizontalAlignment="Left"
-             Background="#eceff1" Margin="116,136,0,0" VerticalAlignment="Top" Width="333"/>
-        <Button Content="Сохранить" Command="{Binding Save_Discount}" HorizontalAlignment="Left" Margin="82,188,0,0" VerticalAlignment="Top" Width="119"
+             Background="#eceff1" Margin="116,155,0,0" VerticalAlignment="Top" Height="25" Foreground="#546e7a" Width="333" FontSize="12"/>
+        <Button Content="Сохранить" Command="{Binding Save_Discount}" HorizontalAlignment="Left" Margin="81,197,0,0" VerticalAlignment="Top" Width="119"
                 Style="{StaticResource MaterialDesignRaisedButton}" 
                 Background="#eceff1" Foreground="#546e7a" Height="28"/>
-        <Button Content="Отменить" Command="{Binding Close_Win}" HorizontalAlignment="Left" Margin="269,188,0,0" VerticalAlignment="Top" Width="119"
+        <Button Content="Отменить" Command="{Binding Close_Win}" HorizontalAlignment="Left" Margin="269,197,0,0" VerticalAlignment="Top" Width="119"
                 Background="#eceff1" Foreground="#546e7a" Height="28"/>
-   </Grid>
+    </Grid>
 </Window>

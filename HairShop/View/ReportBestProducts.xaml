@@ -9,7 +9,7 @@
     <Grid>
         <Rectangle Margin="0,0,0,0" Grid.ColumnSpan="2">
             <Rectangle.Fill>
-                <ImageBrush/>
+                <ImageBrush ImageSource="back1.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
         <Rectangle HorizontalAlignment="Left" Margin="170,63,0,0" VerticalAlignment="Top" Width="222" Height="28" Fill="#eceff1"/>

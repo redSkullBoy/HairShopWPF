@@ -142,12 +142,125 @@ namespace HairShop.Models
             }
         }
 
+        public List<DiscountModel> GetDiscounts()
+        {
+            var result = db.Discounts.ToList().Select(i => new DiscountModel(i)).ToList();
+            return result;
+        }
+
         public List<DiscountModel> GetDiscountsByDateAndProdType(DateTime dateDiscount, int prodTypeID)
         {
             var result = db.Discounts.ToList()
                 .Where(i => i.D_Start <= dateDiscount && i.D_End >= dateDiscount && (i.Product_Type_ID == null || i.Product_Type_ID == prodTypeID))
                 .Select(i => new DiscountModel(i)).ToList();
             return result;
+        }
+
+        public int GetNextDiscountID()
+        {
+            int? maxId = db.Discounts.Max(u => (int?)u.Discount_ID);
+            int idNext = maxId == null ? 1 : ((int)maxId) + 1;
+            return idNext;
+        }
+
+        public void AddDiscounts(Discount discount)
+        {
+            db.Discounts.Add(discount);
+            db.SaveChanges();
+        }
+
+        public Discount GetDiscount(int discountID)
+        {
+            return db.Discounts
+                .Where(i => (i.Discount_ID == discountID)).First();
+        }
+
+        public void RemoveDiscounts(Discount dis)
+        {
+            db.Discounts.Remove(dis);
+            db.SaveChanges();
+        }
+
+        public List<ProductReport> GetReportBestProducts(DateTime dateBeg, DateTime dateEnd)
+        {
+            List<ProductReport> prods = db.Products
+                .Join(db.Line_of_checks, p => p.Product_ID, c => c.Product_ID, (p, c) => new ProductReport { Check_ID = c.Check_ID, Check_Date = DateTime.Now, Product_Name = p.Product_Name, Product_Quantity = c.Product_Quantity })
+                .Join(db.Checks, pc => pc.Check_ID, ch => ch.Check_ID, (pc, ch) => new ProductReport { Check_ID = pc.Check_ID, Check_Date = (DateTime)ch.data_sale, Product_Name = pc.Product_Name, Product_Quantity = pc.Product_Quantity })
+                .Where(pp => pp.Check_Date >= dateBeg && pp.Check_Date <= dateEnd)
+                .ToList()
+                .GroupBy(i => i.Product_Name)
+                .Select(r => new ProductReport { Product_Name = r.First().Product_Name, Product_Quantity = r.Sum(c => c.Product_Quantity) })
+                .OrderByDescending(r => r.Product_Quantity)
+                .Take(10)
+                .ToList();
+
+            return prods;
+        }
+
+        public int GetNextSupplyID()
+        {
+            int? maxId = db.Supplies.Max(u => (int?)u.Supply_ID);
+            int idNext = maxId == null ? 1 : ((int)maxId) + 1;
+            return idNext;
+        }
+
+        public void AddSupplies(Supply supply)
+        {
+            db.Supplies.Add(supply);
+            db.SaveChanges();
+        }
+
+        public void AddLineOfSupplies(Line_of_supply los)
+        {
+            db.Line_of_supplies.Add(los);
+            db.SaveChanges();
+        }
+
+        public List<SupplierModel> GetSuppliers()
+        {
+            return db.Suppliers.ToList().Select(i => new SupplierModel(i)).ToList();
+        }
+
+        public int GetNextSupplierID()
+        {
+            int? maxId = db.Suppliers.Max(u => (int?)u.Supplier_ID);
+            int idNext = maxId == null ? 1 : ((int)maxId) + 1;
+            return idNext;
+        }
+
+        public void AddSuppliers(Supplier supplier)
+        {
+            db.Suppliers.Add(supplier);
+            db.SaveChanges();
+        }
+
+        public Line_of_supply GetLineOfSupply(int supplyID, int productID)
+        {
+            Line_of_supply res = null;
+            List<Line_of_supply> loss = db.Line_of_supplies.ToList()
+                .Where(i => (i.Supply_ID == supplyID && i.Product_ID == productID)).ToList();
+            if (loss.Count > 0)
+            {
+                res = loss.First();
+            }
+            return res;
+        }
+
+        public void RemoveLineOfSupplies(Line_of_supply los)
+        {
+            db.Line_of_supplies.Remove(los);
+            db.SaveChanges();
+        }
+
+        public void ApplySupplyProducts(int productID, int quantity, decimal price)
+        {
+            Product product = db.Products.Find(productID);
+            if (product != null)
+            {
+                product.count_stock += quantity;
+                product.unit_price = price;
+                db.SaveChanges();
+            }
         }
     }
 }

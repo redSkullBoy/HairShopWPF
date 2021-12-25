@@ -9,7 +9,7 @@
     <Grid>
         <Rectangle Margin="0,0,0,0" Grid.ColumnSpan="2">
             <Rectangle.Fill>
-                <ImageBrush/>
+                <ImageBrush ImageSource="back1.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
         <ComboBox DisplayMemberPath="Product_Type_Name" ItemsSource="{Binding ProductTypes}"  SelectedItem="{Binding SelectedProductType}" 
@@ -36,16 +36,16 @@
             </DataGrid.Columns>
             <DataGrid.Resources>
                 <Style TargetType="DataGridRow">
-                    
+                    <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
                 </Style>
             </DataGrid.Resources>
         </DataGrid>
         <Button Content="Создать товар" Command="{Binding Create_Product}" HorizontalAlignment="Left" Margin="570,81,0,0" VerticalAlignment="Top" Width="127" Height="28" Background="#eceff1" Foreground="#546e7a"/>
         <Button Content="Закрыть" Command="{Binding Close_Win}" HorizontalAlignment="Right" Margin="0,15,15,0" VerticalAlignment="Top" Width="100" Background="#eceff1" Foreground="#546e7a" Height="28"/>
-        <Label Content="Тип товара:" HorizontalAlignment="Left" Margin="15,8,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#546e7a"/>
-        <Label Content="Тип волос:" HorizontalAlignment="Left" Margin="200,8,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#546e7a"/>
-        <Label Content="Бренд:" HorizontalAlignment="Left" Margin="385,8,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#546e7a"/>
-        <Label Content="Название:" HorizontalAlignment="Left" Margin="15,58,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#546e7a" Height="23" Width="66"/>
+        <Label Content="Тип товара:" HorizontalAlignment="Left" Margin="15,8,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#546e7a" FontWeight="Bold"/>
+        <Label Content="Тип волос:" HorizontalAlignment="Left" Margin="200,8,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#546e7a" FontWeight="Bold"/>
+        <Label Content="Бренд:" HorizontalAlignment="Left" Margin="385,8,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#546e7a" FontWeight="Bold"/>
+        <Label Content="Название:" HorizontalAlignment="Left" Margin="15,58,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#546e7a" FontWeight="Bold" Height="23" Width="75"/>
 
     </Grid>
 </Window>

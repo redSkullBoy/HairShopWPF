@@ -9,10 +9,10 @@
     <Grid>
         <Rectangle Margin="0,0,0,0">
             <Rectangle.Fill>
-                <ImageBrush/>
+                <ImageBrush ImageSource="back1.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Button Content="Закрыть" Command="{Binding Close_Win}" HorizontalAlignment="Right" Margin="597,15,15,0" VerticalAlignment="Top" Width="100" Background="#eceff1" Foreground="#546e7a" Height="28"/>
+        <Button Content="Закрыть" Command="{Binding Close_Win}" HorizontalAlignment="Right" Margin="0,15,14.6,0" VerticalAlignment="Top" Width="90" Background="#eceff1" Foreground="#546e7a" Height="28"/>
         <Label Content="Номер накладной:" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Foreground="#546e7a" FontWeight="Bold"/>
         <TextBox Text="{Binding NumberInvoice}" HorizontalAlignment="Left" Margin="138,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"
              Background="#eceff1" Height="28"/>
@@ -37,6 +37,6 @@
                 Background="#eceff1" Foreground="#546e7a" Height="28"/>
         <ComboBox DisplayMemberPath="Supplier_Name" ItemsSource="{Binding Suppliers}"  SelectedItem="{Binding SelectedSupplier}" 
             HorizontalAlignment="Left" Margin="138,81,0,0" VerticalAlignment="Top" Width="221" Background="#eceff1" Height="28"
-            FontSize="14" Foreground="#546e7a" />
+            FontSize="14" Foreground="#546e7a"/>
     </Grid>
 </Window>

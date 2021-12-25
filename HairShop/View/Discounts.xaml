@@ -9,10 +9,10 @@
     <Grid>
         <Rectangle Margin="0,0,0,0" Grid.ColumnSpan="2">
             <Rectangle.Fill>
-                <ImageBrush/>
+                <ImageBrush ImageSource="back1.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Button Content="Закрыть" Command="{Binding Close_Win}" HorizontalAlignment="Right" Margin="603,15,15,0" VerticalAlignment="Top" Width="92"
+        <Button Content="Закрыть" Command="{Binding Close_Win}" HorizontalAlignment="Right" Margin="0,15,14.6,0" VerticalAlignment="Top" Width="89"
                Background="#eceff1" Foreground="#546e7a" Height="28"/>
         <DataGrid x:Name="GridDiscounts" ItemsSource="{Binding TableDiscounts}" SelectedItem="{Binding SelectedDiscount}" AutoGenerateColumns="False" 
                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="15,62,15,15" IsReadOnly="True" FontSize="14" Foreground="#546e7a">

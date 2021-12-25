@@ -9,20 +9,20 @@
     <Grid>
         <Rectangle Margin="0,0,0,0" Grid.ColumnSpan="2">
             <Rectangle.Fill>
-                <ImageBrush/>
+                <ImageBrush ImageSource="back1.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
         <Label Content="Название товара:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="#546e7a" FontWeight="Bold"/>
-        <TextBox Text="{Binding Product_Name}" HorizontalAlignment="Left" Height="26" Margin="15,41,15,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="508" 
+        <TextBox Text="{Binding Product_Name}" HorizontalAlignment="Left" Height="30" Margin="15,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="508" 
              IsReadOnly="True" Background="#eceff1" Foreground="#546e7a" FontSize="14"/>
         <Label Content="Количество товара:" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top"  Foreground="#546e7a" FontWeight="Bold"/>
-        <TextBox Text="{Binding Product_Quantity}" HorizontalAlignment="Left" Height="26" Margin="15,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261"
+        <TextBox Text="{Binding Product_Quantity}" HorizontalAlignment="Left" Height="30" Margin="15,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261"
              Background="#eceff1" Foreground="#546e7a" FontSize="14"/>
         <Label Content="Стоимость товара:" HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top"  Foreground="#546e7a" FontWeight="Bold"/>
-        <TextBox Text="{Binding Product_Price}" HorizontalAlignment="Left" Height="26" Margin="15,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261"
+        <TextBox Text="{Binding Product_Price}" HorizontalAlignment="Left" Height="30" Margin="15,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261"
              Background="#eceff1" Foreground="#546e7a" FontSize="14"/>
-        <Button Content="Добавить" Command="{Binding Add_Product_Supply}" HorizontalAlignment="Left" Margin="15,199,0,0" VerticalAlignment="Top" Width="118"              
+        <Button Content="Добавить" Command="{Binding Add_Product_Supply}" HorizontalAlignment="Left" Margin="109,199,0,0" VerticalAlignment="Top" Width="118"              
                 Background="#eceff1" Foreground="#546e7a" Height="28"/>
-        <Button Content="Отменить" Command="{Binding Close_Win}" HorizontalAlignment="Left" Margin="158,199,0,0" VerticalAlignment="Top" Width="118" Background="#eceff1" Foreground="#546e7a" Height="28"/>
+        <Button Content="Отменить" Command="{Binding Close_Win}" HorizontalAlignment="Left" Margin="301,199,0,0" VerticalAlignment="Top" Width="118" Background="#eceff1" Foreground="#546e7a" Height="28"/>
     </Grid>
 </Window>

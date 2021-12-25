@@ -34,7 +34,7 @@
     <Grid>
         <Rectangle Margin="0,0,-0.4,-0.4">
             <Rectangle.Fill>
-                <ImageBrush />
+                <ImageBrush ImageSource="back1.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
         <Rectangle Height="275" VerticalAlignment="Bottom" Margin="146,0,134,103" RadiusY="10" RadiusX="10" Fill="#546e7a" RenderTransformOrigin="1.034,0.152">
