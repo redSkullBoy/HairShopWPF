@@ -53,7 +53,7 @@ namespace HairShop.ViewModels
                 return add_to_check ??
                     (add_to_check = new ReCommand(obj =>
                     {
-                        //--- проверка корректности количества ---
+                        //проверка корректности количества
                         int prQuantity = 0;
                         int.TryParse(productQuantity, out prQuantity);
                         if (prQuantity == 0)
@@ -61,7 +61,7 @@ namespace HairShop.ViewModels
                             MessageBox.Show("Недопустимое значение в поле Количество.");
                             return;
                         }
-                        //--- проверка наличия товара в заказе ---
+                        //проверка наличия товара в заказе
                         if (db.IsProductInCheck(checkID, productID))
                         {
                             Line_of_check loch = db.GetLineOfCheck(checkID, productID);

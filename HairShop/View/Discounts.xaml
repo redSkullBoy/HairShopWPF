@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Акции" Height="480" Width="720" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Rectangle Margin="0,0,0,0" Grid.ColumnSpan="2">
+        <Rectangle Grid.ColumnSpan="2">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="back1.jpg"/>
             </Rectangle.Fill>
@@ -24,10 +24,8 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Создать акцию" Command="{Binding Create_Discount}" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Width="133"
-            Style="{StaticResource MaterialDesignRaisedButton}" 
                 Background="#eceff1" Foreground="#546e7a" Height="28"/>
-        <Button Content="Редактировать" Command="{Binding Edit_Discount}" HorizontalAlignment="Left" Margin="153,15,0,0" VerticalAlignment="Top" Width="139"
-                Style="{StaticResource MaterialDesignRaisedButton}" 
+        <Button Content="Редактировать" Command="{Binding Edit_Discount}" HorizontalAlignment="Left" Margin="153,15,0,0" VerticalAlignment="Top" Width="139" 
                 Background="#eceff1" Foreground="#546e7a" Height="28"/>
         <Button Content="Удалить" Command="{Binding Delete_Discount}" HorizontalAlignment="Left" Margin="297,15,0,0" VerticalAlignment="Top" Width="99"
                 Background="#eceff1" Foreground="#546e7a" Height="28" RenderTransformOrigin="1.517,0.788"/>

@@ -13,9 +13,9 @@
             </Rectangle.Fill>
         </Rectangle>
         <Label Content="Товар:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#546e7a" FontSize="13"/>
-        <TextBox x:Name="textBoxProductName" Text="{Binding ProductName}" HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#eceff1" Foreground="#546e7a" Width="372"/>
+        <TextBox x:Name="textBoxProductName" Text="{Binding ProductName}" HorizontalAlignment="Left" Height="28" Margin="10,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#eceff1" Foreground="#546e7a" Width="372"/>
         <Label Content="Количество:" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#546e7a" FontSize="13"/>
-        <TextBox Text="{Binding ProductQuantity}" HorizontalAlignment="Left" Height="23" Margin="10,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#eceff1" Foreground="#546e7a" Width="182"/>
+        <TextBox Text="{Binding ProductQuantity}" HorizontalAlignment="Left" Height="28" Margin="10,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#eceff1" Foreground="#546e7a" Width="182"/>
         <Button Content="Добавить в заказ" Command="{Binding Add_To_Check}" HorizontalAlignment="Left" Margin="37,141,0,0" VerticalAlignment="Top" Width="164" Background="#eceff1" Foreground="#546e7a" Height="28"/>
         <Button Content="Закрыть" Command="{Binding Close_Win}" HorizontalAlignment="Left" Margin="241,141,0,0" VerticalAlignment="Top" Background="#eceff1" Foreground="#546e7a" Width="95" Height="28"/>
     </Grid>

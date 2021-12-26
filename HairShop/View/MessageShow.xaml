@@ -20,6 +20,6 @@
         <TextBox Text="{Binding Message}" HorizontalAlignment="Left" Height="153" Margin="61,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390"
                  IsReadOnly="True" FontSize="18" Foreground="#eceff1"/>
         <Button Content="OK" Command="{Binding Close_Win}" HorizontalAlignment="Right" Margin="0,216,216,0" VerticalAlignment="Top" Width="67"
-            Style="{StaticResource MaterialDesignRaisedButton}" Background="#eceff1" Foreground="#546e7a" Height="28"/>
+                Background="#eceff1" Foreground="#546e7a" Height="28"/>
     </Grid>
 </Window>

@@ -16,20 +16,15 @@
                 <ImageBrush ImageSource="back1.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Button Content="Складские остатки" Command="{Binding Storage_Balance}" 
-                Style="{StaticResource MaterialDesignRaisedButton}" Foreground="#eceff1"
+        <Button Content="Складские остатки" Command="{Binding Storage_Balance}" Foreground="#eceff1"
                 Background="#546e7a" HorizontalAlignment="Left" Margin="111,107,0,0" VerticalAlignment="Top" Width="400" Height="36" FontSize="18"/>
-        <Button Content="Поставка товара" Command="{Binding Supply_Product}" 
-                Style="{StaticResource MaterialDesignRaisedButton}" Foreground="#eceff1"
+        <Button Content="Поставка товара" Command="{Binding Supply_Product}" Foreground="#eceff1"
                 Background="#546e7a" HorizontalAlignment="Left" Margin="111,167,0,0" VerticalAlignment="Top" Width="400" Height="36" FontSize="18"/>
-        <Button Content="Акции по товарам" Command="{Binding Edit_Discounts}" 
-                Style="{StaticResource MaterialDesignRaisedButton}" Foreground="#eceff1"
+        <Button Content="Акции по товарам" Command="{Binding Edit_Discounts}" Foreground="#eceff1"
                 Background="#546e7a" HorizontalAlignment="Left" Margin="111,227,0,0" VerticalAlignment="Top" Width="400" Height="36" FontSize="18"/>
-        <Button Content="Отчет о востребованных товарах" Command="{Binding Report_BestProducts}" 
-                Style="{StaticResource MaterialDesignRaisedButton}" Foreground="#eceff1"
+        <Button Content="Отчет о востребованных товарах" Command="{Binding Report_BestProducts}" Foreground="#eceff1"
                 Background="#546e7a" HorizontalAlignment="Left" Margin="111,287,0,0" VerticalAlignment="Top" Width="400" Height="36" FontSize="18"/>
         <Button Content="Выход" Command="{Binding Close_Win}" Foreground="#eceff1" Background="#546e7a" HorizontalAlignment="Right" Margin="0,29,60.6,0" 
                 VerticalAlignment="Top" Width="103" FontSize="18" Height="36"/>
-
     </Grid>
 </Window>

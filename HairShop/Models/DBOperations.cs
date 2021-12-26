@@ -38,8 +38,7 @@ namespace HairShop.Models
 
         public List<ProductModel> GetFilteredProduct(FilterProductModel filter)
         {
-            var result = db.Products.ToList()
-                //.Join(db.Product_Types, pr => pr.Product_Type_ID, prt => prt.Product_Type_ID, (pr, prt) => pr)
+            var result = db.Products.ToList()               
                 .Where(i => (filter.Product_Name_Temp is null || i.Product_Name.ToLower().Contains(filter.Product_Name_Temp))
                     && (filter.Product_Type is null || i.Product_Type_ID == filter.Product_Type.Product_Type_ID)
                     && (filter.Hair_Type is null || i.Hair_Type_ID == filter.Hair_Type.Hair_Type_ID)
@@ -108,6 +107,7 @@ namespace HairShop.Models
             db.Line_of_checks.Remove(loch);
             db.SaveChanges();
         }
+
         public bool IsCheckExists(int checkID)
         {
             bool res = false;
@@ -130,6 +130,19 @@ namespace HairShop.Models
             if (prods.Count > 0)
                 res = true;
             return res;
+        }
+
+        public int GetNextProductID()
+        {
+            int? maxId = db.Products.Max(u => (int?)u.Product_ID);
+            int idNext = maxId == null ? 1 : ((int)maxId) + 1;
+            return idNext;
+        }
+
+        public void AddProducts(Product product)
+        {
+            db.Products.Add(product);
+            db.SaveChanges();
         }
 
         public void DecreaseProduct(int productID, int quantity)

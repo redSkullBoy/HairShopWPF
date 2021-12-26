@@ -24,8 +24,10 @@
         <TextBox Text="{Binding ProductNameTemplate}" HorizontalAlignment="Left" Margin="15,68,0,0" TextWrapping="Wrap" 
                  VerticalAlignment="Top" Width="340" Background="#eceff1" Height="28" FontSize="14" Foreground="#546e7a"/>
 
-        <Button Content="Поиск" Command="{Binding Select_Product}" HorizontalAlignment="Left" Margin="360,68,0,0" VerticalAlignment="Top" Width="100" Height="28" Background="#eceff1" Foreground="#546e7a"/>
-        <Button Content="Очистить" Command="{Binding Clear_Filter}" HorizontalAlignment="Left" Margin="465,68,0,0" VerticalAlignment="Top" Width="100" Height="28" Background="#eceff1" Foreground="#546e7a"/>
+        <Button Content="Поиск" Command="{Binding Select_Product}" HorizontalAlignment="Left" Margin="360,68,0,0" VerticalAlignment="Top" Width="100" Height="28"
+                Background="#eceff1" Foreground="#546e7a"/>
+        <Button Content="Очистить" Command="{Binding Clear_Filter}" HorizontalAlignment="Left" Margin="465,68,0,0" VerticalAlignment="Top" Width="100" Height="28" 
+                Background="#eceff1" Foreground="#546e7a"/>
         <Button Content="Закрыть" Command="{Binding Close_Win}" HorizontalAlignment="Right" Margin="0,15,15,0" VerticalAlignment="Top" Width="100" Background="#eceff1" Foreground="#546e7a" Height="28"/>
         <DataGrid x:Name="GridProducts" ItemsSource="{Binding FilteredProducts}" SelectedItem="{Binding SelectedProduct}" AutoGenerateColumns="False" 
             HorizontalAlignment="Stretch" Margin="15,110,15,15" 

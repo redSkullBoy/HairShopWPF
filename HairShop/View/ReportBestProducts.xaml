@@ -21,7 +21,6 @@
         <Label Content="Начало периода:" HorizontalAlignment="Left" Margin="15,25,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#546e7a" FontWeight="Bold"/>
         <Label Content="Окончание периода:" HorizontalAlignment="Left" Margin="15,63,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#546e7a" FontWeight="Bold"/>
         <Button Content="Сформировать отчет" Command="{Binding Report_Forming}" HorizontalAlignment="Right" Margin="0,118,107,0" VerticalAlignment="Top" Width="193"
-            Style="{StaticResource MaterialDesignRaisedButton}"
             Background="#eceff1" Foreground="#546e7a" Height="28"/>
     </Grid>
 </Window>

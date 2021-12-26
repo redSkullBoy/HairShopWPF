@@ -69,7 +69,6 @@ namespace HairShop.ViewModels
         }
 
 
-
         private ReCommand close;
         public ReCommand Close_Win
         {

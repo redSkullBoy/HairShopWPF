@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HairShop.View"
         mc:Ignorable="d"
-        Title="Акция" Height="265" Width="470" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Акция" Height="272.467" Width="470" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Rectangle Margin="0,0,0,0" Grid.ColumnSpan="2">
             <Rectangle.Fill>
@@ -26,11 +26,10 @@
         <Rectangle HorizontalAlignment="Left" Margin="116,115,0,0" VerticalAlignment="Top" Width="333" Height="28" Fill="#eceff1"/>
         <DatePicker SelectedDate="{Binding Discount_DateEnd}" HorizontalAlignment="Left" Margin="116,116,0,0" VerticalAlignment="Top" Width="333" 
              Background="#eceff1" BorderBrush="#546e7a" Height="28" FontSize="12"/>
-        <Label Content="Тип товара:" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top"  FontWeight="Bold" Foreground="#546e7a"/>
-        <ComboBox DisplayMemberPath="Product_Type_Name" ItemsSource="{Binding ProductTypes}"  SelectedItem="{Binding SelectedProductType}" HorizontalAlignment="Left"
-             Background="#eceff1" Margin="116,155,0,0" VerticalAlignment="Top" Height="25" Foreground="#546e7a" Width="333" FontSize="12"/>
+        <Label Content="Тип товара:" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top"  FontWeight="Bold" Foreground="#546e7a"/>
+        <ComboBox DisplayMemberPath="Product_Type_Name" ItemsSource="{Binding ProductTypes}" SelectedItem="{Binding SelectedProductType}" HorizontalAlignment="Left"
+             Background="#eceff1" Margin="116,155,0,0" VerticalAlignment="Top" Height="28" Foreground="#546e7a" Width="333" FontSize="12"/>
         <Button Content="Сохранить" Command="{Binding Save_Discount}" HorizontalAlignment="Left" Margin="81,197,0,0" VerticalAlignment="Top" Width="119"
-                Style="{StaticResource MaterialDesignRaisedButton}" 
                 Background="#eceff1" Foreground="#546e7a" Height="28"/>
         <Button Content="Отменить" Command="{Binding Close_Win}" HorizontalAlignment="Left" Margin="269,197,0,0" VerticalAlignment="Top" Width="119"
                 Background="#eceff1" Foreground="#546e7a" Height="28"/>

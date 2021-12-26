@@ -18,9 +18,11 @@
              Background="#eceff1" Height="28"/>
         <Label Content="Дата:" HorizontalAlignment="Left" Margin="18,48,0,0" VerticalAlignment="Top" Foreground="#546e7a" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Margin="138,48,0,0" VerticalAlignment="Top" Width="221" Fill="#eceff1" Height="28"/>
-        <DatePicker Text="{Binding DateInvoice}" HorizontalAlignment="Left" Margin="138,48,0,0" VerticalAlignment="Top" Width="221" Background="#eceff1" Height="28" BorderBrush="#546e7a"/>
+        <DatePicker Text="{Binding DateInvoice}" HorizontalAlignment="Left" Margin="138,48,0,0" VerticalAlignment="Top" Width="221" Background="#eceff1"
+                    Height="28" BorderBrush="#546e7a"/>
         <Label Content="Поставщик:" HorizontalAlignment="Left" Margin="18,81,0,0" VerticalAlignment="Top" Foreground="#546e7a" FontWeight="Bold"/>
-        <Button Content="Добавить" Command="{Binding Add_Product}" HorizontalAlignment="Left" Margin="372,81,0,0" VerticalAlignment="Top" Width="103" Background="#eceff1" Foreground="#546e7a" Height="28"/>
+        <Button Content="Добавить" Command="{Binding Add_Product}" HorizontalAlignment="Left" Margin="372,81,0,0" VerticalAlignment="Top" Width="103" 
+                Background="#eceff1" Foreground="#546e7a" Height="28"/>
         <Button Content="Удалить" Command="{Binding Delete_Product}" HorizontalAlignment="Left" Margin="480,81,0,0" VerticalAlignment="Top" Width="87" 
             Background="#eceff1" Foreground="#546e7a" Height="28"/>
         <DataGrid x:Name="GridProducts" ItemsSource="{Binding SupplyProducts}" SelectedItem="{Binding SelectedSupplyProduct}" AutoGenerateColumns="False" 
@@ -33,7 +35,6 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Провести" Command="{Binding Applay_Product}" HorizontalAlignment="Right" Margin="0,81,15,0" VerticalAlignment="top" Width="120"
-                Style="{StaticResource MaterialDesignRaisedButton}" 
                 Background="#eceff1" Foreground="#546e7a" Height="28"/>
         <ComboBox DisplayMemberPath="Supplier_Name" ItemsSource="{Binding Suppliers}"  SelectedItem="{Binding SelectedSupplier}" 
             HorizontalAlignment="Left" Margin="138,81,0,0" VerticalAlignment="Top" Width="221" Background="#eceff1" Height="28"

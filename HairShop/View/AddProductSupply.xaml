@@ -23,6 +23,7 @@
              Background="#eceff1" Foreground="#546e7a" FontSize="14"/>
         <Button Content="Добавить" Command="{Binding Add_Product_Supply}" HorizontalAlignment="Left" Margin="109,199,0,0" VerticalAlignment="Top" Width="118"              
                 Background="#eceff1" Foreground="#546e7a" Height="28"/>
-        <Button Content="Отменить" Command="{Binding Close_Win}" HorizontalAlignment="Left" Margin="301,199,0,0" VerticalAlignment="Top" Width="118" Background="#eceff1" Foreground="#546e7a" Height="28"/>
+        <Button Content="Отменить" Command="{Binding Close_Win}" HorizontalAlignment="Left" Margin="301,199,0,0" VerticalAlignment="Top" Width="118"
+                Background="#eceff1" Foreground="#546e7a" Height="28"/>
     </Grid>
 </Window>
