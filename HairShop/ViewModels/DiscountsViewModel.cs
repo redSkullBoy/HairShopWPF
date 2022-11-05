@@ -52,7 +52,7 @@ namespace HairShop.ViewModels
 
 
         private ReCommand create_discount;
-        public ReCommand Create_Discount
+        public ReCommand Create_Discount //добавление акции 
         {
             get
             {
@@ -70,7 +70,7 @@ namespace HairShop.ViewModels
 
 
         private ReCommand edit_discount;
-        public ReCommand Edit_Discount
+        public ReCommand Edit_Discount //редактирование
         {
             get
             {
@@ -91,7 +91,7 @@ namespace HairShop.ViewModels
 
 
         private ReCommand delete_discount;
-        public ReCommand Delete_Discount
+        public ReCommand Delete_Discount //удаление акции
         {
             get
             {
@@ -102,7 +102,6 @@ namespace HairShop.ViewModels
                       {
                           Discount discount = db.GetDiscount(selecteddiscount.Discount_ID);
                           db.RemoveDiscounts(discount);
-
                           TableDiscounts = new ObservableCollection<DiscountModel>(db.GetDiscounts());
                           OnPropertyChanged("TableDiscounts");
                       }

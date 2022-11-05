@@ -161,7 +161,6 @@ namespace HairShop.ViewModels
                           SupplyProductModel supprmod = SupplyProducts[ii];
                           db.ApplySupplyProducts(supprmod.Product_ID, supprmod.Product_Quantity, supprmod.Product_Price);
                       }
-
                       supplyproduct.Close();
                   }));
             }

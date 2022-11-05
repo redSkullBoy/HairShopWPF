@@ -58,7 +58,7 @@ namespace HairShop.ViewModels
 
 
         private ReCommand close;
-        public ReCommand Close_Win
+        public ReCommand Close_Win //закрытие окна
         {
             get
             {
@@ -72,7 +72,7 @@ namespace HairShop.ViewModels
 
 
         private ReCommand add_product_supply;
-        public ReCommand Add_Product_Supply
+        public ReCommand Add_Product_Supply //добавление товара в поставку
         {
             get
             {

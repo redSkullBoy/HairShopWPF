@@ -95,7 +95,7 @@ namespace HairShop.ViewModels
 
 
         private ReCommand select;
-        public ReCommand Select_Product
+        public ReCommand Select_Product //фильтрация
         {
             get
             {
@@ -111,7 +111,7 @@ namespace HairShop.ViewModels
 
 
         private ReCommand clear;
-        public ReCommand Clear_Filter
+        public ReCommand Clear_Filter //сброс фильтрации
         {
             get
             {
@@ -134,7 +134,7 @@ namespace HairShop.ViewModels
 
 
         private ReCommand create_product;
-        public ReCommand Create_Product
+        public ReCommand Create_Product //нажата кнопка "добавить"
         {
             get
             {

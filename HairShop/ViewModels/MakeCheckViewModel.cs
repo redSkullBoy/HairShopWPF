@@ -221,7 +221,7 @@ namespace HairShop.ViewModels
         }
 
         private ReCommand clear_check;
-        public ReCommand Clear_Check
+        public ReCommand Clear_Check //очищение покупки
         {
             get
             {
@@ -255,7 +255,7 @@ namespace HairShop.ViewModels
         }
 
         private ReCommand edit_checkproduct;
-        public ReCommand Edit_CheckProduct
+        public ReCommand Edit_CheckProduct //изменение строки в чеке
         {
             get
             {
@@ -283,7 +283,7 @@ namespace HairShop.ViewModels
         }
 
         private ReCommand delete_checkproduct;
-        public ReCommand Delete_CheckProduct
+        public ReCommand Delete_CheckProduct //удаление товара из покупки
         {
             get
             {
@@ -299,11 +299,12 @@ namespace HairShop.ViewModels
                       OnPropertyChanged("CheckProducts");
                       Summa_Itogo = ReCountItog();
                       OnPropertyChanged("Summa_Itogo");
+
                   }));
             }
         }
 
-        private decimal ReCountItog()
+        private decimal ReCountItog() //подсчёт "итого"
         {
             decimal res = 0.0M;
             for (int ii = 0; ii < CheckProducts.Count; ii++)
@@ -326,7 +327,7 @@ namespace HairShop.ViewModels
 
 
         private ReCommand check_pdf;
-        public ReCommand Check_Pdf
+        public ReCommand Check_Pdf //создание чека
         {
             get
             {

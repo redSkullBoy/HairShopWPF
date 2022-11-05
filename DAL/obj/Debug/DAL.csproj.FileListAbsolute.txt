@@ -1,0 +1,24 @@
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\DAL\bin\Debug\DAL.dll.config
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\DAL\bin\Debug\DAL.dll
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\DAL\bin\Debug\DAL.pdb
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\DAL\obj\Debug\DAL.dll
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\DAL\obj\Debug\DAL.pdb
+E:\Работа\магазин\HairShop\DAL\bin\Debug\DAL.dll.config
+E:\Работа\магазин\HairShop\DAL\bin\Debug\DAL.dll
+E:\Работа\магазин\HairShop\DAL\bin\Debug\DAL.pdb
+E:\Работа\магазин\HairShop\DAL\bin\Debug\EntityFramework.dll
+E:\Работа\магазин\HairShop\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Работа\магазин\HairShop\DAL\bin\Debug\EntityFramework.xml
+E:\Работа\магазин\HairShop\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Работа\магазин\HairShop\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\Работа\магазин\HairShop\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\Работа\магазин\HairShop\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\Работа\магазин\HairShop\DAL\obj\Debug\DAL.dll
+E:\Работа\магазин\HairShop\DAL\obj\Debug\DAL.pdb

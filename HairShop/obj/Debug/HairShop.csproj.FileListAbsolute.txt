@@ -1,0 +1,113 @@
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\App.g.cs
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\HairShop_MarkupCompile.cache
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\HairShop_MarkupCompile.lref
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\HairShop.exe.config
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\HairShop.exe
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\HairShop.pdb
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\HairShop.g.resources
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\HairShop.Properties.Resources.resources
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\HairShop.csproj.GenerateResource.cache
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\HairShop.csproj.CoreCompileInputs.cache
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\HairShop.exe
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\HairShop.pdb
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\DAL.dll
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\EntityFramework.dll
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\DAL.pdb
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\DAL.dll.config
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\EntityFramework.xml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\HairShop.csprojAssemblyReference.cache
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\HairShop.csproj.CopyComplete
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\MaterialDesignColors.dll
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\MakeCheck.g.cs
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\AddToCheck.g.cs
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\Authorization.g.cs
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\WindowManager.g.cs
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\AddToCheck.baml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\Authorization.baml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\MakeCheck.baml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\WindowManager.baml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\App.baml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\MessageShow.g.cs
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\itextsharp.dll
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\bin\Debug\itextsharp.xml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\MessageShow.baml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\AddProductSupply.g.cs
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\AddToSupply.g.cs
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\CreateProduct.g.cs
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\DiscountEdit.g.cs
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\Discounts.g.cs
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\ReportBestProducts.g.cs
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\StorageBalance.g.cs
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\SupplyProduct.g.cs
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\AddProductSupply.baml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\AddToSupply.baml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\CreateProduct.baml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\DiscountEdit.baml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\Discounts.baml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\ReportBestProducts.baml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\StorageBalance.baml
+C:\Users\Арина\Desktop\УНИВЕР\3 КУРС\Фомина\HairShop\HairShop\obj\Debug\View\SupplyProduct.baml
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\HairShop.exe.config
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\HairShop.exe
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\HairShop.pdb
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\BouncyCastle.Crypto.dll
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\DAL.dll
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\EntityFramework.dll
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\EntityFramework.SqlServer.dll
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\itextsharp.dll
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\MaterialDesignColors.dll
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\DAL.pdb
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\DAL.dll.config
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\EntityFramework.xml
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\EntityFramework.SqlServer.xml
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\itextsharp.xml
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\MaterialDesignColors.pdb
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\Работа\магазин\HairShop\HairShop\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\HairShop.csproj.AssemblyReference.cache
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\HairShop.csproj.SuggestedBindingRedirects.cache
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\AddProductSupply.g.cs
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\AddToCheck.g.cs
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\AddToSupply.g.cs
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\Authorization.g.cs
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\CreateProduct.g.cs
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\DiscountEdit.g.cs
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\Discounts.g.cs
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\MakeCheck.g.cs
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\MessageShow.g.cs
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\ReportBestProducts.g.cs
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\StorageBalance.g.cs
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\SupplyProduct.g.cs
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\WindowManager.g.cs
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\App.g.cs
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\HairShop_MarkupCompile.cache
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\HairShop_MarkupCompile.lref
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\App.baml
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\AddProductSupply.baml
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\AddToCheck.baml
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\AddToSupply.baml
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\Authorization.baml
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\CreateProduct.baml
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\DiscountEdit.baml
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\Discounts.baml
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\MakeCheck.baml
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\MessageShow.baml
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\ReportBestProducts.baml
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\StorageBalance.baml
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\SupplyProduct.baml
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\View\WindowManager.baml
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\HairShop.g.resources
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\HairShop.Properties.Resources.resources
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\HairShop.csproj.GenerateResource.cache
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\HairShop.csproj.CoreCompileInputs.cache
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\HairShop.csproj.CopyComplete
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\HairShop.exe
+E:\Работа\магазин\HairShop\HairShop\obj\Debug\HairShop.pdb
